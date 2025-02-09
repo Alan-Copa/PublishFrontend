@@ -31,7 +31,12 @@
     {
       title: 'Vuetify GitHub',
       icon: `mdi-github`,
-      href: 'https://github.com/Alan-Copa/RealEstate',
+      href: 'https://github.com/Alan-Copa',
+    },
+    {
+      title: 'Vuetify Likedin',
+      icon: `mdi-linkedin`,
+      href: 'https://www.linkedin.com/in/alan-copa-03776929b/',
     },
 
   ]

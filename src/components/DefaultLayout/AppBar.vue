@@ -5,8 +5,8 @@
     <v-btn icon variant="text" class="ms-4" nav>
       <v-icon>mdi-rocket</v-icon>
     </v-btn>
-    <v-btn class="mr-4">
-      <v-toolbar-title>C-World, trust the process</v-toolbar-title>
+    <v-btn class="mr-4" nav>
+      <v-toolbar-title>C-World, Alan Copa's Portfolio</v-toolbar-title>
     </v-btn>
 
     <!-- Spacer to center the search bar -->
@@ -59,7 +59,7 @@
 
     <!-- User Information -->
     <v-list-item
-        append-avatar="https://randomuser.me/api/portraits/men/85.jpg"
+        append-avatar="https://randomuser.me/api/portraits/men/3.jpg"
         title=""
         nav
       >
