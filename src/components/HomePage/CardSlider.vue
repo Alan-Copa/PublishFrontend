@@ -19,12 +19,17 @@
         >
           <div>
             <h2 class="text-h4 font-weight-bold">{{ slides[n - 1].title }}</h2>
+            <v-divider 
+              class="inv my-1" 
+            ></v-divider>
+            <v-spacer></v-spacer>
+            
             <img
-              :src="`/images/projects/${n}.png`"
+              :src="`/projects/${slides[n - 1].imgname}`"
               alt="Project"
               height="100"
             />
-            <p class="text-body-1 mt-3">{{ slides[n - 1].content }}</p>
+            <p class="text-body-1">{{ slides[n - 1].content }}</p>
           </div>
         </v-card>
       </v-window-item>
@@ -71,16 +76,19 @@ const slides = ref([
     title: "Smart Contracts: Crowdfunding",
     content:
       "Ethereum-based smart contracts",
+    imgname: "crwdf.png",
   },
   {
     title: "Smart Estate",
     content:
       "Smart Estate: A blockchain-based real estate platform",
+    imgname: "smart-estate.png",
   },
   {
     title: "Data Visualization Portfolio",
     content:
       "Interactive Data Visualization Portfolio",
+    imgname: "data-viz-cop-dalle-v1.pdf",
   },
   {
     title: "AI Chatbot",
@@ -178,5 +186,9 @@ const prev = () => {
 
 .v-btn {
   margin: 0 8px;
+}
+
+.inv {
+  opacity: 0; /* Ensures it doesn’t affect layout */
 }
 </style>
