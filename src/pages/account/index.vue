@@ -4,7 +4,6 @@
 
     <!-- If the user is not authorized, we show the invitation to connect the wallet -->
     <div v-if="!walletAddress">
-      <h2>Please connect your wallet to access your account</h2>
       <NewUser />
     </div>
 
@@ -76,10 +75,36 @@
           <MyPropertiesCard :properties="userProperties" />
         </div>
 
+
+
         <div class="div4">
           <!-- Last Transactions -->
           <LastTransactionsCard :transactions="recentTransactions" />
         </div>
+
+        <v-btn
+          class="custom-btn"
+          color="red"
+          title="Crowdfunding"
+          to="/crowdfunding"
+          variant="flat"
+        >
+          <v-icon size="24">mdi-currency-usd</v-icon>
+          <span>Crowdfunding</span>
+        </v-btn>
+
+        <v-btn
+          class="custom-btn"
+          color="green"
+          title="Be Generous"
+          to="/all-crowdfunds"
+          variant="flat"
+        >
+          <v-icon size="24">mdi-heart</v-icon>
+          <span>Be Generous</span>
+        </v-btn>
+
+
       </div>
     </div>
   <!-- </div> -->
@@ -245,4 +270,17 @@ async function refreshUser() {
 .div1, .div2, .div3, .div4, .div5 {
   margin: 0.5em;
 }
+
+.custom-btn {
+  font-weight: bold;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: var(--v-theme-primary);
+  color: white;
+  transform: scale(1.05);
+}
 </style>
+

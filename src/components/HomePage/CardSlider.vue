@@ -4,6 +4,9 @@
     theme="dark"
     flat
   >
+    <!-- <v-card-title class="text-center">
+      <h1 class="text-h4">Quick Overview of My Projects</h1>
+    </v-card-title> -->
     <v-window v-model="onboarding">
       <v-window-item
         v-for="n in slides.length"
@@ -16,6 +19,11 @@
         >
           <div>
             <h2 class="text-h4 font-weight-bold">{{ slides[n - 1].title }}</h2>
+            <img
+              :src="`/images/projects/${n}.png`"
+              alt="Project"
+              height="100"
+            />
             <p class="text-body-1 mt-3">{{ slides[n - 1].content }}</p>
           </div>
         </v-card>
@@ -70,9 +78,9 @@ const slides = ref([
       "Smart Estate: A blockchain-based real estate platform",
   },
   {
-    title: "Interactive Data Visualization",
+    title: "Data Visualization Portfolio",
     content:
-      "Interactive Data Visualization Portal",
+      "Interactive Data Visualization Portfolio",
   },
   {
     title: "AI Chatbot",

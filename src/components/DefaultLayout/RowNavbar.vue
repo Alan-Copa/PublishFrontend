@@ -3,29 +3,25 @@
       <!-- <v-list density="compact" nav> -->
         <v-btn
           prepend-icon="mdi-home-city"
-          title="chatbot"
-          to="/chatbot"
-        >AI Chatbot</v-btn>
-        <v-btn
-          prepend-icon="mdi-home-city"
           title="Home"
           to="/"
         >Home</v-btn>
         <v-btn
+          prepend-icon="mdi-home-city"
+          title="chatbot"
+          to="/chatbot"
+        >AI Chatbot</v-btn>
+        <v-btn
           prepend-icon="mdi-account"
           title="My Account"
           to="/account"
-        >My Account</v-btn>
+        >Access Blockchain</v-btn>
         <v-btn
-          prepend-icon="mdi-currency-usd"
-          title="Crowdfounding"
-          to="/crowdfunding"
-        >Crowdfounding</v-btn>
-        <v-btn
-          prepend-icon="mdi-heart"
-          title="Be Generous"
-          to="/all-crowdfunds"
-        >Be Generous</v-btn> 
+          prepend-icon="mdi-home-city"
+          title="Data Visualizations"
+          to="/data-viz-portfolio"
+        >Data Visualizations</v-btn>
+        
         <!-- <v-btn
           prepend-icon="mdi-storefront"
           title="Market Explorer"
@@ -43,6 +39,11 @@
           title="Map Explorer"
           to="/map"
         > Map Explorer</v-btn> <!-- Map Explorer -->
+        <v-btn
+          prepend-icon="mdi-home-city"
+          title="PDF Manipulator"
+          to="/pdf-manipulator"
+        >PDF Manipulator</v-btn>
         <!-- <v-btn
           prepend-icon="mdi-chart-line"
           title="Graphs"

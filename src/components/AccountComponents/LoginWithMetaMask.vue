@@ -39,6 +39,7 @@ async function LogingWithMetamask() {
 </script>
 
 <template>
+  
   <v-btn
     color="primary"
     v-if="!walletAddress"
@@ -53,4 +54,5 @@ async function LogingWithMetamask() {
   >
     Connected: {{ truncateAddress(walletAddress) }}
   </v-btn>
+
 </template>

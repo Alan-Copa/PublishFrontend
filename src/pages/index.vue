@@ -6,10 +6,9 @@
       <p class="text-h6 text-center text-secondary">
         My favorite projects and technologies.
       </p>
-      <v-btn large color="primary" class="mt-6" href="/account">
-        Get Started
+      <v-btn large color="primary" class="mt-6" href="/projects">
+        See Projects
       </v-btn>  
-      
       <!-- <v-btn large color="primary" class="mt-6" href="/account">
         Sync Wallet
       </v-btn> -->
@@ -25,11 +24,10 @@
               Tokenize!
             </v-btn>
         </div> -->
-  
-  
        
   
-        <div class="divAsk">   
+        <div class="divAsk">
+          <h1 class="display-2 text-center text-primary">Quick Overview of My Projects</h1>
           <CardSlider></CardSlider>
         </div>
         <div class="divAsk">
@@ -86,6 +84,10 @@
     align-items: center;
     text-align: center;
     margin: 7em;
+  }
+
+  h1 {
+    font-size: 2.5em;
   }
   
   </style>

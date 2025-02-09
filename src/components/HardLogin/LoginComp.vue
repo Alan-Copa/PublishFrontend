@@ -1,10 +1,10 @@
 <template>
     <div>
-      <v-img
+      <!-- <v-img
         class="mx-auto my-6"
         max-width="228"
         src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-text-light.svg"
-      ></v-img>
+      ></v-img> -->
   
       <v-card
         class="mx-auto pa-12 pb-8"
@@ -12,6 +12,8 @@
         max-width="448"
         rounded="lg"
       >
+
+      <h1 class="text-h4 font-weight-bold text-center mb-8">Sign in to your account</h1>
         <div class="text-subtitle-1 text-medium-emphasis">Account</div>
   
         <v-text-field
