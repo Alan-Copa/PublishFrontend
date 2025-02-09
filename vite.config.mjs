@@ -64,6 +64,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['leaflet', 'concaveman'], // Pre-bundle concaveman explicitly
+    include: ['leaflet', 'concaveman', 'ethers'], // Pre-bundle concaveman explicitly
   },
 });
