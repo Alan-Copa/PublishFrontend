@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app>
+  <v-app-bar app color="transparent">
 
     <!-- Logo -->
     <v-btn icon variant="text" class="ms-4" nav>
