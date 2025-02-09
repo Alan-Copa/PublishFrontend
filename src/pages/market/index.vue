@@ -1,7 +1,7 @@
 <template>
-  <!-- <v-parallax src="../../../parallax/monotone.jpg"> -->
+  <v-parallax src="../../parallax/monotone.jpg">
     <MarketGrid :units="properties" />
-  <!-- </v-parallax> -->
+  </v-parallax>
 </template>
 
 <script setup>

@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <!-- <v-parallax
-    src="../../parallax/spacehoriz1.jpg"
-    > -->
+    <v-parallax
+    src="../parallax/spacehoriz1.jpg"
+    >
       <!-- Updated App Bar -->
       <AppBar @toggle-drawer="drawer = !drawer" />
 
@@ -17,7 +17,7 @@
       <!-- Footer -->
       <AppFooter />
 
-   <!-- </v-parallax> -->
+   </v-parallax>
   </v-app>
 </template>
 
