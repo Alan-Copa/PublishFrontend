@@ -1,6 +1,13 @@
 <template>
   <v-container class="pa-6">
-    <h1 class="text-h4 font-weight-bold mb-6">My Projects</h1>
+    <v-container class="header-container" fluid>
+        <v-row align="center">
+            <h1 class="display-2">My Projects</h1>
+            <v-divider class="inv mr-3" inset vertical></v-divider>
+            <v-icon>mdi-projector-screen</v-icon>
+            <v-divider class="inv ms-3" inset vertical></v-divider>
+        </v-row>
+    </v-container>
 
     <v-row justify="center">
       <v-col 
@@ -33,3 +40,9 @@ const slides = ref([
   { title: "Instagram Bot", content: "Bot to count followers on Instagram", imgname: "insta.png", year: 2023, type: "Personal" },
 ]);
 </script>
+
+<style scoped>
+.inv {
+  opacity: 0; /* Ensures it doesn’t affect layout */
+}
+</style>

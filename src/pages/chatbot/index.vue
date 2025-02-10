@@ -1,12 +1,12 @@
 <template>
-    <v-container class="my-6 pa-4">
+    <v-container class="pa-6">
        <!-- Header -->
        <v-container class="header-container" fluid>
         <v-row align="center">
           <h1>Free GPT-4o</h1>
-          <v-divider class="mr-3" inset vertical></v-divider>
+          <v-divider class="inv mr-3" inset vertical></v-divider>
           <v-icon>mdi-hand-heart</v-icon>
-          <v-divider class="ms-3" inset vertical></v-divider>
+          <v-divider class="inv ms-3" inset vertical></v-divider>
         </v-row>
       </v-container>
 
@@ -201,5 +201,9 @@ const clearMessages = () => {
 .input-container {
   padding: 10px;
   /* background-color: #fff; */
+}
+
+.inv {
+  opacity: 0; /* Ensures it doesn’t affect layout */
 }
 </style>

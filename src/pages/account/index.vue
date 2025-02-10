@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="divLayoutMargin"> -->
-    <v-container class="my -6 pa-4">
+    <v-container class="pa-6">
 
     <!-- If the user is not authorized, we show the invitation to connect the wallet -->
     <div v-if="!walletAddress">

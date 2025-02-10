@@ -22,7 +22,7 @@
           to="/chatbot"
         >AI Chatbot</v-btn>
         <v-btn
-          prepend-icon="mdi-account"
+          prepend-icon="mdi-graph"
           title="My Account"
           to="/account"
         >Access Blockchain</v-btn>

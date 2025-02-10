@@ -1,10 +1,16 @@
 <template>
 
 <v-container class="pa-6">
-  <h1 class="display-2">Access Your Account</h1>
+  <v-container class="header-container" fluid>
+      <v-row align="center">
+          <h1 class="display-2">Access Your Account</h1>
+          <v-divider class="inv mr-3" inset vertical></v-divider>
+          <v-icon>mdi-account</v-icon>
+          <v-divider class="inv ms-3" inset vertical></v-divider>
+      </v-row>
+  </v-container>
 
-    <!-- <v-card class="my-6 pa-4" elevation="2" rounded> -->
-
+    <!-- login content -->
   <v-container class="login-container">
     <v-row class="justify-center align-center" no-gutters>
       <!-- Left: Login Component -->
@@ -71,6 +77,10 @@ defineProps({
 
 .gap-4 {
   gap: 16px;
+}
+
+.inv {
+  opacity: 0; /* Ensures it doesn’t affect layout */
 }
 </style>
 
