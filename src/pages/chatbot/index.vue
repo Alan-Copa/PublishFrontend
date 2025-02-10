@@ -11,7 +11,7 @@
     </v-container>
 
     <!-- AI Model Selection -->
-    <v-card class="mx-auto" max-width="700" color="transparent" elevation="0">
+    <v-card class="mx-auto" max-width="700" color="transparent" elevation="0" >
       <v-container fluid>
         <v-row dense>
           <v-col
@@ -113,11 +113,15 @@ const confirmSelection = () => {
   backdrop-filter: blur(10px);
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
+  margin: 5px;
 }
 /* Hover effect */
 .modelCard:hover {
   backdrop-filter: blur(15px);
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+.inv {
+  opacity: 0; /* Ensures it doesn’t affect layout */
 }
 </style>
