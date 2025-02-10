@@ -6,7 +6,7 @@
       <v-icon>mdi-rocket</v-icon>
     </v-btn>
     <v-btn class="mr-4" nav>
-      <v-toolbar-title>C-World, Alan Copa's Portfolio</v-toolbar-title>
+      <v-toolbar-title>Alan Copa's Portfolio</v-toolbar-title>
     </v-btn>
 
     <!-- Spacer to center the search bar -->

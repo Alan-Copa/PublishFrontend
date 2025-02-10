@@ -2,12 +2,22 @@
       <!-- Navigation Links -->
       <!-- <v-list density="compact" nav> -->
         <v-btn
-          prepend-icon="mdi-home-city"
+          prepend-icon="mdi-home"
           title="Home"
           to="/"
         >Home</v-btn>
         <v-btn
-          prepend-icon="mdi-home-city"
+          prepend-icon="mdi-projector-screen"
+          title="Data Visualizations"
+          to="/projects"
+        >Projects</v-btn>
+        <v-btn
+          prepend-icon="mdi-chart-bar"
+          title="Data Visualizations"
+          to="/data-viz-portfolio"
+        >Data Visualizations</v-btn>
+        <v-btn
+          prepend-icon="mdi-chat"
           title="chatbot"
           to="/chatbot"
         >AI Chatbot</v-btn>
@@ -16,11 +26,7 @@
           title="My Account"
           to="/account"
         >Access Blockchain</v-btn>
-        <v-btn
-          prepend-icon="mdi-home-city"
-          title="Data Visualizations"
-          to="/data-viz-portfolio"
-        >Data Visualizations</v-btn>
+        
         
         <!-- <v-btn
           prepend-icon="mdi-storefront"
@@ -34,11 +40,11 @@
           to="/revenue"
         ></v-btn> -->
   
-        <v-btn
+        <!-- <v-btn
           prepend-icon="mdi-map"
           title="Map Explorer"
           to="/map"
-        > Map Explorer</v-btn> <!-- Map Explorer -->
+        >Map Explorer</v-btn> Map Explorer -->
         <!-- <v-btn
           prepend-icon="mdi-home-city"
           title="PDF Manipulator"

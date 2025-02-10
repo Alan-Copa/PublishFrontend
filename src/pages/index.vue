@@ -30,9 +30,9 @@
           <h1 class="display-2 text-center text-primary">Quick Overview of My Projects</h1>
           <CardSlider></CardSlider>
         </div>
-        <div class="divAsk">
+        <!-- <div class="divAsk">
           <SlideGroups></SlideGroups>
-        </div>
+        </div> -->
   
         <!-- <div class="divAsk">
           <h1 class="display-2 text-center text-primary">Explore on the Map!</h1>
