@@ -3,7 +3,7 @@
     :disabled="loading"
     :loading="loading"
     class="projectCard mx-auto my-6"
-    max-width="2000"
+    max-width="800"
     color="transparent"
     elevation="8"
   >
@@ -18,9 +18,9 @@
 
     <!-- Title & Subtitle (Above IFrame) -->
     <v-card-item class="text-center">
-      <v-card-title class="text-h5">Interactive Data Visualization</v-card-title>
+      <v-card-title class="text-h5">{{ title }}</v-card-title>
       <v-card-subtitle>
-        <span class="me-1">Real-time Insights & Analytics</span>
+        <span class="me-1">{{ subtitle }}</span>
         <v-icon color="primary" icon="mdi-chart-line" size="small"></v-icon>
       </v-card-subtitle>
     </v-card-item>
@@ -28,7 +28,7 @@
     <!-- Embedded Interactive Visualization (Large) -->
     <v-container class="iframe-container">
       <iframe
-        src="/data-viz-portfolio/interactive/index.html"
+        :src="iframeSrc"
         width="100%"
         height="500"
         style="border: none; border-radius: 8px;"
@@ -38,7 +38,7 @@
     <!-- Description -->
     <v-card-text>
       <p class="text-body-1 text-center">
-        Explore real-time interactive data visualizations and analytics. Click the button below to open the full version.
+        {{ description }}
       </p>
     </v-card-text>
 
@@ -51,7 +51,7 @@
         color="blue-darken-2"
         variant="tonal"
         block
-        href="https://interactive-visualization.vercel.app/"
+        :href="externalLink"
         target="_blank"
         prepend-icon="mdi-open-in-new"
       >
@@ -63,6 +63,15 @@
 
 <script setup>
 import { ref } from "vue";
+
+// Props for reusability
+defineProps({
+  title: String,
+  subtitle: String,
+  description: String,
+  iframeSrc: String,
+  externalLink: String,
+});
 
 const loading = ref(false);
 </script>

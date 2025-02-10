@@ -14,7 +14,7 @@
       <!-- Quick Description -->
       <v-container class="text-center my-6">
         <p class="text-body-1">
-          Explore my interactive and dynamic data visualizations. Each project represents real-world insights using modern data visualization tools.
+          Explore my interactive and dynamic data visualizations. Each project represents real-world insights using modern data visualization tools. Download the PDF to view the full portfolio. 
         </p>
       </v-container>
   
@@ -44,28 +44,58 @@
         </v-col>
       </v-row>
 
-        <InteractiveVizCard />
+      <v-container>
+        <div
+          v-for="(viz, index) in visualizations"
+          :key="index"
+        >
+          <InteractiveVizCard
+            :title="viz.title"
+            :subtitle="viz.subtitle"
+            :description="viz.description"
+            :iframeSrc="viz.iframeSrc"
+            :externalLink="viz.externalLink"
+          />
+        </div>
+      </v-container>
+
 
 
     </v-container>
   </template>
-  
-  <script setup>
-  const downloadPDF = () => {
-    // Simulating PDF download
-    const pdfUrl = "/data-viz-portfolio/Data_Visualization_Portfolio.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Data_Visualizations.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-  </script>
-  
-  <style scoped>
-  .inv {
-    opacity: 0;
-  }
-  </style>
+
+<script setup>
+import InteractiveVizCard from '@/components/Data-viz-portfolio/InteractiveVizCard.vue';
+
+const downloadPDF = () => {
+  // Simulating PDF download
+  const pdfUrl = "/data-viz-portfolio/Data_Visualization_Portfolio.pdf";
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = "Data_Visualizations.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+// List of Interactive Visualizations
+const visualizations = ref([
+  {
+    title: "The Rise of Broadband: Global Subscriptions (1998-2022)",
+    subtitle: "Interactive Data Visualization",
+    description: "From 1998 to 2022, the world saw a dramatic rise in broadband subscriptions. This interactive visualization explores global and regional adoption trends, showcasing the impact of infrastructure growth, policy changes, and digital transformation on internet connectivity.",
+    iframeSrc: "/data-viz-portfolio/interactive/index.html",
+    externalLink: "https://interactive-visualization.vercel.app/"
+  },
+]);
+
+
+
+</script>
+
+<style scoped>
+.inv {
+  opacity: 0;
+}
+</style>
   
