@@ -57,16 +57,26 @@
       </v-row>
   
       <!-- Interactive Component Placeholder -->
-      <v-container class="interactive-section">
-        <v-card elevation="3" class="pa-4">
+        <v-card elevation="3" class="pa-4 ">
           <v-card-title class="text-h5">Interactive Visualization</v-card-title>
           <v-card-text>
             <p class="text-body-2">
               This section will feature an interactive data visualization component. Stay tuned for updates!
             </p>
           </v-card-text>
+
+          <!-- Embedding the Plotly HTML file -->
+        <v-container class="iframe-container">
+          <iframe
+            src="/data-viz-portfolio/interactive/index.html"
+            width="100%"
+            height="600"
+            style="border: none;"
+          ></iframe>
+        </v-container>
         </v-card>
-      </v-container>
+
+
     </v-container>
   </template>
   
@@ -86,11 +96,6 @@
   <style scoped>
   .inv {
     opacity: 0;
-  }
-  
-  .interactive-section {
-    text-align: center;
-    margin-top: 20px;
   }
   </style>
   
