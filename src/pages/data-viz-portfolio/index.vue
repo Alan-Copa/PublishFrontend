@@ -45,26 +45,35 @@
       </v-row>
 
       <v-container>
-        <div
-          v-for="(viz, index) in visualizations"
-          :key="index"
-        >
-          <InteractiveVizCard
-            :title="viz.title"
-            :subtitle="viz.subtitle"
-            :description="viz.description"
-            :iframeSrc="viz.iframeSrc"
-            :externalLink="viz.externalLink"
-          />
-        </div>
-      </v-container>
-
+    <div
+      v-for="(viz, index) in visualizations"
+      :key="index"
+    >
+      <InteractiveSparklineCard
+        v-if="viz.chartData"
+        :title="viz.title"
+        :subtitle="viz.subtitle"
+        :description="viz.description"
+        :externalLink="viz.externalLink"
+        :chartData="viz.chartData"
+      />
+      <InteractiveVizCard
+        v-else
+        :title="viz.title"
+        :subtitle="viz.subtitle"
+        :description="viz.description"
+        :iframeSrc="viz.iframeSrc"
+        :externalLink="viz.externalLink"
+      />
+    </div>
+  </v-container>
 
 
     </v-container>
   </template>
 
 <script setup>
+import InteractiveSparklineCard from '@/components/Data-viz-portfolio/InteractiveSparklineCard.vue';
 import InteractiveVizCard from '@/components/Data-viz-portfolio/InteractiveVizCard.vue';
 
 const downloadPDF = () => {
@@ -87,9 +96,14 @@ const visualizations = ref([
     iframeSrc: "/data-viz-portfolio/interactive/index.html",
     externalLink: "https://interactive-visualization.vercel.app/"
   },
+  {
+    title: "Website Traffic Over Time",
+    subtitle: "User Visits Per Day",
+    description: "Analyze trends in website traffic over the past month.",
+    externalLink: "https://traffic-analysis.vercel.app/",
+    chartData: [5, 8, 3, 12, 9, 15, 18, 10, 7, 14, 10, 20, 22, 5, 17],
+  },
 ]);
-
-
 
 </script>
 
