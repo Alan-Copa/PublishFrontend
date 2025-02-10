@@ -27,7 +27,7 @@
        
   
         <div class="divAsk">
-          <h1 class="display-2 text-center text-primary">Quick Overview of My Projects</h1>
+          <h1 class="display-2 text-center text-primary">Overview of My Projects</h1>
           <CardSlider></CardSlider>
         </div>
         <!-- <div class="divAsk">

@@ -2,8 +2,10 @@
     <v-card
       :disabled="loading"
       :loading="loading"
-      class="mx-auto my-6"
+      class="projectCard mx-auto my-6"
       max-width="374"
+      color="transparent"
+      elevation="8"
     >
       <template v-slot:loader="{ isActive }">
         <v-progress-linear
@@ -65,6 +67,7 @@
         color="deep-purple-lighten-2"
         text="Book a Demo"
         block
+        border
         @click="bookDemo"
       >
         Book a Demo
@@ -99,4 +102,18 @@
     setTimeout(() => (loading.value = false), 2000);
   };
   </script>
+
+<style scoped>
+.projectCard {
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+/* Hover effect */
+.projectCard:hover {
+  backdrop-filter: blur(15px);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+</style>  
   
