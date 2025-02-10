@@ -39,11 +39,11 @@
           title="Map Explorer"
           to="/map"
         > Map Explorer</v-btn> <!-- Map Explorer -->
-        <v-btn
+        <!-- <v-btn
           prepend-icon="mdi-home-city"
           title="PDF Manipulator"
           to="/pdf-manipulator"
-        >PDF Manipulator</v-btn>
+        >PDF Manipulator</v-btn> -->
         <!-- <v-btn
           prepend-icon="mdi-chart-line"
           title="Graphs"

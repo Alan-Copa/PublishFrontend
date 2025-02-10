@@ -4,34 +4,83 @@
     theme="dark"
     flat
   >
-    <!-- <v-card-title class="text-center">
-      <h1 class="text-h4">Quick Overview of My Projects</h1>
-    </v-card-title> -->
+
     <v-window v-model="onboarding">
+
       <v-window-item
         v-for="n in slides.length"
         :key="`card-${n}`"
         :value="n"
       >
+
+      <v-row class="d-flex justify-center align-center">
+  <v-btn
+    icon="mdi-chevron-left"
+    variant="plain"
+    size="x-large"
+    class="mx-4"
+    @click="prev"
+    style="font-size: 3rem; width: 80px; height: 80px;"
+  ></v-btn>
+
         <v-card
-          class="d-flex justify-center align-center text-center"
-          height="200"
-        >
-          <div>
-            <h2 class="text-h4 font-weight-bold">{{ slides[n - 1].title }}</h2>
-            <v-divider 
-              class="inv my-1" 
-            ></v-divider>
-            <v-spacer></v-spacer>
-            
-            <img
-              :src="`/projects/${slides[n - 1].imgname}`"
-              alt="Project"
-              height="100"
-            />
-            <p class="text-body-1">{{ slides[n - 1].content }}</p>
-          </div>
-        </v-card>
+    :disabled="loading"
+    :loading="loading"
+    class="mx-auto my-12 pa-4"
+    max-width="400"
+  >
+    <template v-slot:loader="{ isActive }">
+      <v-progress-linear
+        :active="isActive"
+        color="deep-purple"
+        height="4"
+        indeterminate
+      ></v-progress-linear>
+    </template>
+
+    <v-card-item>
+      <v-card-title class="text-h5 font-weight-bold">
+        {{ slides[n - 1].title }}
+      </v-card-title>
+      <v-divider class="my-2"></v-divider>
+    </v-card-item>
+
+    <v-img
+      :src="`/projects/${slides[n - 1].imgname}`"
+      alt="Project"
+      height="200"
+      cover
+      class="my-2"
+    ></v-img>
+
+    <v-card-text>
+      <p class="text-body-1">
+        {{ slides[n - 1].content }}
+      </p>
+    </v-card-text>
+
+    <v-card-actions>
+      <v-btn
+        color="deep-purple-lighten-2"
+        text="Learn More"
+        block
+        border
+        @click="handleClick"
+      ></v-btn>
+    </v-card-actions>
+  </v-card>
+
+        <!-- </v-card> -->
+        
+        <v-btn
+          icon="mdi-chevron-right"
+          variant="plain"
+          size="x-large"
+          class="mx-4"
+          @click="next"
+          style="font-size: 3rem; width: 80px; height: 80px;"
+        ></v-btn>
+      </v-row>
       </v-window-item>
     </v-window>
 
@@ -88,47 +137,55 @@ const slides = ref([
     title: "Data Visualization Portfolio",
     content:
       "Interactive Data Visualization Portfolio",
-    imgname: "data-viz-cop-dalle-v1.pdf",
+    imgname: "dataviz.png",
   },
   {
     title: "AI Chatbot",
     content:
       "Secure AI Chatbot running on your device",
+    imgname: "ai.png",
   },
   {
     title: "Customer Relationship Management",
     content:
       "A CRM system I developed for a company",
+    imgname: "CRM.png",
   },
   {
     title: "PDF Manipulator",
     content:
       "Secure PDF Manipulator running on your device",
+    imgname: "PDF.png",
   },
   {
     title: "Map",
     content:
       "Interactive Map",
+    imgname: "map.png",
   },
   {
     title: "My Terminal",
     content:
       "My zshrc custom terminal",
+    imgname: "terminal.png",
   },
   {
     title: "Instagram Bot",
     content:
       "Bot to count followers on Instagram",
+    imgname: "insta.png",
   },
   {
     title: "Shutdown Script",
     content:
       "Mini script that is activated when the computer whith Windows OS is turned off ",
+    imgname: "shutdown.png",
   },
   {
     title: "Philosophy",
     content:
       "just.. Philosophy",
+    imgname: "philosophy.png",
   },
   
   
@@ -158,6 +215,15 @@ const next = () => {
 
 const prev = () => {
   onboarding.value = onboarding.value - 1 <= 0 ? slides.value.length : onboarding.value - 1;
+};
+
+
+const currentSlide = computed(() => slides.value[n.value - 1]);
+let loading = ref(false);
+
+const handleClick = () => {
+  loading.value = true;
+  setTimeout(() => (loading.value = false), 2000);
 };
 </script>
 
