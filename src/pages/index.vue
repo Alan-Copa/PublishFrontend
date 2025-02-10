@@ -6,7 +6,7 @@
       <p class="text-h6 text-center text-secondary">
         My favorite projects and technologies.
       </p>
-      <v-btn large color="primary" class="mt-6" href="/projects">
+      <v-btn large color="primary" class="mt-6" to="/projects">
         See Projects
       </v-btn>  
       <!-- <v-btn large color="primary" class="mt-6" href="/account">
