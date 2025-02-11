@@ -1,107 +1,122 @@
 <template>
-    <v-card
-      :disabled="loading"
-      :loading="loading"
-      class="projectCard mx-auto my-6"
-      max-width="374"
-      color="transparent"
-      elevation="8"
-    >
-      <template v-slot:loader="{ isActive }">
-        <v-progress-linear
-          :active="isActive"
-          color="deep-purple"
-          height="4"
-          indeterminate
-        ></v-progress-linear>
-      </template>
-  
-      <!-- Project Image -->
-      <v-img height="200" :src="`/projects/${imgname}`" cover></v-img>
-  
-      <!-- Project Title & Subtitle -->
-      <v-card-item>
-        <v-card-title>{{ title }}</v-card-title>
-        <v-card-subtitle>
-          <span class="me-1">Featured Project</span>
-          <v-icon color="primary" icon="mdi-star-circle" size="small"></v-icon>
-          <br>
-            <span class="me-1">{{ year }} - {{ type }}</span>
-            <v-icon v-if="type === 'Company'" color="blue" icon="mdi-office-building" size="small"></v-icon>
-            <v-icon v-else-if="type === 'University'" color="green" icon="mdi-school" size="small"></v-icon>
-            <v-icon v-else color="purple" icon="mdi-account" size="small"></v-icon>
-        </v-card-subtitle>
-      </v-card-item>
+  <v-card
+    :disabled="loading"
+    :loading="loading"
+    class="projectCard mx-auto my-6"
+    max-width="374"
+    color="transparent"
+    elevation="8"
+  >
+    <template v-slot:loader="{ isActive }">
+      <v-progress-linear
+        :active="isActive"
+        color="deep-purple"
+        height="4"
+        indeterminate
+      ></v-progress-linear>
+    </template>
 
+    <!-- Project Image -->
+    <v-img height="200" :src="`/projects/${imgname}`" cover></v-img>
 
-      <!-- Project Content -->
-      <v-card-text>
-        <p class="text-body-1">
-          {{ content }}
-        </p>
-      </v-card-text>
-      
-  
-      <!-- Divider -->
-      <v-divider class="mx-4 mb-1"></v-divider>
-      <v-spacer></v-spacer>
+    <!-- Project Title & Subtitle -->
+    <v-card-item>
+      <v-card-title>{{ title }}</v-card-title>
+      <v-card-subtitle>
+        <span class="me-1">Featured Project</span>
+        <v-icon color="primary" icon="mdi-star-circle" size="small"></v-icon>
+        <br>
+        <span class="me-1">{{ year }} - {{ type }}</span>
+        <v-icon v-if="type === 'Company'" color="blue" icon="mdi-office-building" size="small"></v-icon>
+        <v-icon v-else-if="type === 'University'" color="green" icon="mdi-school" size="small"></v-icon>
+        <v-icon v-else color="purple" icon="mdi-account" size="small"></v-icon>
+      </v-card-subtitle>
+    </v-card-item>
 
-  
-      <!-- Card Actions -->
-      <v-card-actions>
-  <v-row justify="center" no-gutters>
-    <v-col cols="6">
-      <v-btn
-        color="green"
-        text="View Project"
-        block
-        border
-        @click="viewProject"
-      >
-        View Project
-      </v-btn>
-    </v-col>
+    <!-- Project Content -->
+    <v-card-text>
+      <p class="text-body-1">
+        {{ content }}
+      </p>
+    </v-card-text>
 
-    <v-col cols="6">
-      <v-btn
-        color="deep-purple-lighten-2"
-        text="Book a Demo"
-        block
-        border
-        @click="bookDemo"
-      >
-        Book a Demo
-      </v-btn>
-    </v-col>
-  </v-row>
-</v-card-actions>
+    <!-- Divider -->
+    <v-divider class="mx-4 mb-1"></v-divider>
 
-    </v-card>
-  </template>
-  
-  <script setup>
-  import { ref } from "vue";
-  
-  // Props
-  defineProps({
-    title: String,
-    content: String,
-    imgname: String,
-    year: Number,
-    type: String,
-  });
-  
-  const loading = ref(false);
-  
-  const viewProject = () => {
-    loading.value = true;
-    setTimeout(() => (loading.value = false), 2000);
-  };
-  const bookDemo = () => {
-    loading.value = true;
-    setTimeout(() => (loading.value = false), 2000);
-  };
-  </script>
+    <!-- Card Actions (Conditional Buttons) -->
+    <v-card-actions>
+      <v-row justify="center" no-gutters>
+        <v-col v-if="GdriveLink" cols="12" class="mb-2">
+          <v-btn 
+            color="blue-darken-2"
+            block
+            :href="GdriveLink"
+            target="_blank"
+            prepend-icon="mdi-google-drive"
+          >
+            Google Drive
+          </v-btn>
+        </v-col>
+
+        <v-col v-if="GithubLink" cols="12" class="mb-2">
+          <v-btn 
+            color="black"
+            block
+            :href="GithubLink"
+            target="_blank"
+            prepend-icon="mdi-github"
+          >
+            GitHub Repository
+          </v-btn>
+        </v-col>
+
+        <v-col v-if="externalLink" cols="12" class="mb-2">
+          <v-btn 
+            color="blue"
+            block
+            :href="externalLink"
+            target="_blank"
+            prepend-icon="mdi-open-in-new"
+          >
+            External Link
+          </v-btn>
+        </v-col>
+
+        <v-col v-if="DemoLink" cols="12">
+          <v-btn 
+            color="deep-purple-accent-4"
+            block
+            :to="DemoLink"
+            prepend-icon="mdi-calendar-check"
+          >
+            Book Demo
+          </v-btn>
+        </v-col>
+
+      </v-row>
+    </v-card-actions>
+
+  </v-card>
+</template>
+
+<script setup>
+import { ref } from "vue";
+
+// Props
+defineProps({
+  title: String,
+  content: String,
+  imgname: String,
+  year: Number,
+  type: String,
+  GdriveLink: String,
+  GithubLink: String,
+  externalLink: String,
+  DemoLink: String
+});
+
+const loading = ref(false);
+</script>
 
 <style scoped>
 .projectCard {
@@ -109,6 +124,7 @@
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
+
 /* Hover effect */
 .projectCard:hover {
   backdrop-filter: blur(15px);
@@ -116,4 +132,3 @@
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 </style>  
-  
