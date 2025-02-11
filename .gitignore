@@ -1,0 +1,135 @@
+**/database.sqlite
+node_modules
+.deps
+.states
+contracts/artifacts
+artifacts
+cache
+# macOS
+####################
+# Ignore .DS_Store files across the entire repository
+**/.DS_Store
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Python
+####################
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.dll
+*.so
+
+# Virtual Environments
+####################
+env/
+venv/
+.venv/
+.env/
+**.env
+.env
+
+# Jupyter Notebook
+####################
+.ipynb_checkpoints
+
+# Anaconda
+####################
+*.bak
+*.orig
+*.egg-info/
+.eggs/
+*.so
+
+# Distribution / packaging
+####################
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+pip-wheel-metadata/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+####################
+.coverage
+*.cover
+*.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.code-coverage
+*.lcov
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Logs and temporary files
+####################
+*.log
+*.tmp
+*.lock
+*.pid
+*.swp
+
+# Editor/IDE-specific files
+####################
+.idea/
+*.iml
+.vscode/
+*~
+
+# Windows-specific files
+####################
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Installer logs
+####################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled files
+####################
+*.out
+*.class
+*.o
+*.exe
+
+# Editor backups
+####################
+*.swp
+*.swo
+*.swn
