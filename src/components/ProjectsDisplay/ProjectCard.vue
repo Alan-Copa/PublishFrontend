@@ -75,12 +75,24 @@
             color="blue"
             block
             :href="externalLink"
-            target="_blank"
             prepend-icon="mdi-open-in-new"
           >
-            External Link
+            Try it out!
           </v-btn>
         </v-col>
+
+        <v-col v-if="PDFpath" cols="12">
+            <v-btn 
+              color="green-darken-2"
+              block
+              @click="downloadPDF"
+              download
+              prepend-icon="mdi-download"
+            >
+              Download PDF
+            </v-btn>
+          </v-col>
+
 
         <v-col v-if="DemoLink" cols="12">
           <v-btn 
@@ -103,7 +115,7 @@
 import { ref } from "vue";
 
 // Props
-defineProps({
+const props = defineProps({
   title: String,
   content: String,
   imgname: String,
@@ -112,10 +124,21 @@ defineProps({
   GdriveLink: String,
   GithubLink: String,
   externalLink: String,
-  DemoLink: String
+  DemoLink: String,
+  PDFpath: String,
 });
 
 const loading = ref(false);
+
+const downloadPDF = () => {
+  const pdfUrl = props.PDFpath;
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = props.PDFpath.split("/").pop();
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 </script>
 
 <style scoped>
@@ -127,7 +150,7 @@ const loading = ref(false);
 
 /* Hover effect */
 .projectCard:hover {
-  backdrop-filter: blur(15px);
+  /* backdrop-filter: blur(15px); */
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }

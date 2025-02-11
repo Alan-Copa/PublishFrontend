@@ -24,6 +24,7 @@
           :GdriveLink="project.GdriveLink"
           :GithubLink="project.GithubLink"
           :externalLink="project.externalLink"
+          :PDFpath="project.PDFpath"
           :DemoLink="project.DemoLink"
         />
       </v-col>
@@ -35,22 +36,14 @@
 const slides = ref([
   {
     title: "Machine Learning Code", 
-    content: "Jupyter Notebook (`.ipynb`) projects including Neural Networks, Image Classification, and NLP experiments.", 
+    content: "Jupyter Notebook projects including Neural Networks, Image Classification and multiple Regression models", 
     imgname: "mlNotebook.png", 
     year: 2024, 
     type: "University",
     GdriveLink: "https://drive.google.com/drive/folders/1ThFQPpzWAqsLSTbbSz2m9sYORUowraGx?usp=sharing",
-    GithubLink: "",
+    GithubLink: "https://github.com/Alan-Copa/MyMachineLearning",
     externalLink: "",
     DemoLink: "/book-demo", 
-  },
-  { 
-    title: "Smart Contracts: Crowdfunding", 
-    content: "Ethereum-based smart contracts", 
-    imgname: "crwdf.png", 
-    year: 2024, 
-    type: "Personal",
-    DemoLink: "/book-demo"
   },
   { 
     title: "Smart Estate", 
@@ -64,6 +57,17 @@ const slides = ref([
     DemoLink: "/book-demo"
   },
   { 
+    title: "Smart Contracts: Crowdfunding", 
+    content: "Ethereum-based smart contracts", 
+    imgname: "crwdf.png", 
+    year: 2024, 
+    type: "Personal",
+    GdriveLink: "",
+    GithubLink: "",
+    externalLink: "/crowdfunding",
+    DemoLink: "/book-demo"
+  },
+  { 
     title: "Data Visualization Portfolio", 
     content: "Interactive Data Visualization Portfolio", 
     imgname: "dataviz.png", 
@@ -71,7 +75,19 @@ const slides = ref([
     type: "University",
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/DataVisualizationPortfolio",
+    externalLink: "/data-viz-portfolio",
+    DemoLink: "/book-demo"
+  },
+  {
+    title: "slite.ai", 
+    content: "pitch deck for a startup about autonomous rovers delivering food", 
+    imgname: "slite-ai.png", 
+    year: 2024, 
+    type: "University",
+    GdriveLink: "",
+    GithubLink: "",
     externalLink: "",
+    PDFpath: "/projects/slite-ai.pdf",
     DemoLink: "/book-demo"
   },
   { 
@@ -80,6 +96,9 @@ const slides = ref([
     imgname: "ai.png", 
     year: 2024, 
     type: "Personal",
+    GdriveLink: "",
+    GithubLink: "",
+    externalLink: "/chatbot",
     DemoLink: "/book-demo"
   },
   { 
@@ -106,7 +125,7 @@ const slides = ref([
   },
   { 
     title: "Telegram Bot",
-    content: "Telegram bot to automate tasks",
+    content: "Telegram bot to regiter users",
     imgname: "telegram.png",
     year: 2023,
     type: "Company",
@@ -121,6 +140,9 @@ const slides = ref([
     imgname: "PDF.png", 
     year: 2022, 
     type: "Personal",
+    GdriveLink: "",
+    GithubLink: "https://github.com/Alan-Copa/PDF_Manipulator",
+    externalLink: "",
     DemoLink: "/book-demo"
   },
   { 
@@ -129,6 +151,9 @@ const slides = ref([
     imgname: "map.png", 
     year: 2024, 
     type: "Personal",
+    GdriveLink: "",
+    GithubLink: "",
+    externalLink: "/map",
     DemoLink: "/book-demo"
   },
   { 
@@ -137,6 +162,9 @@ const slides = ref([
     imgname: "terminal.png", 
     year: 2024, 
     type: "Personal",
+    GdriveLink: "",
+    GithubLink: "https://github.com/Alan-Copa/My_Terminal",
+    externalLink: "",
     DemoLink: "/book-demo"
   },
   { 
@@ -145,6 +173,9 @@ const slides = ref([
     imgname: "insta.png", 
     year: 2023, 
     type: "Personal",
+    GdriveLink: "",
+    GithubLink: "https://github.com/Alan-Copa/Instagram_Bot",
+    externalLink: "",
     DemoLink: "/book-demo"
   },
 ]);
