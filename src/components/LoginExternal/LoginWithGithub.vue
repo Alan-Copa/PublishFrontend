@@ -4,7 +4,7 @@
     <v-btn
       color="green"
       v-if="!logged"
-      @click="LogingWithGitHub"
+      @click="LoginWithGitHub"
     >
       <v-icon>mdi-wallet</v-icon>
       Login with GitHub

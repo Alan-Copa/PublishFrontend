@@ -16,7 +16,7 @@ async function getSignatureAndMessage() {
   return { message, signature };
 }
 
-async function LogingWithMetamask() {
+async function LoginWithMetamask() {
   const {message, signature} = await getSignatureAndMessage();
   try {
     const addr = await getWalletAddress();
@@ -43,7 +43,7 @@ async function LogingWithMetamask() {
   <v-btn
     color="primary"
     v-if="!walletAddress"
-    @click="LogingWithMetamask"
+    @click="LoginWithMetamask"
   >
     <v-icon>mdi-wallet</v-icon>
     Login with MetaMask
