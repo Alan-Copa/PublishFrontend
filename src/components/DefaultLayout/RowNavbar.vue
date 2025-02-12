@@ -17,6 +17,13 @@
           to="/data-viz-portfolio"
         >Data Visualizations</v-btn>
         <v-btn
+          prepend-icon="mdi-account-circle"
+          title="About Me"
+          to="/about-me"
+        >
+          About Me
+        </v-btn>
+        <v-btn
           prepend-icon="mdi-chat"
           title="chatbot"
           to="/chatbot"
