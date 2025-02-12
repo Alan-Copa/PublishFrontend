@@ -2,7 +2,7 @@
   <v-app-bar app color="transparent">
 
     <!-- Logo -->
-    <v-btn icon variant="text" class="ms-4" nav>
+    <v-btn icon variant="text" class="ms-2" nav>
       <v-icon>mdi-rocket</v-icon>
     </v-btn>
     <v-btn class="mr-4" nav>
@@ -47,15 +47,15 @@
     ></v-divider>
 
     <!-- Login Button -->
-    <div>
+    <!-- <div>
       <LoginWithMetaMask/>
-    </div>
+    </div> -->
 
-    <v-divider
+    <!-- <v-divider
       class="ms-0"
       inset
       vertical
-    ></v-divider>
+    ></v-divider> -->
 
     <!-- User Information -->
     <v-list-item
@@ -73,7 +73,7 @@
       </v-list-item>
 
       <v-divider
-      class="ms-4 hidden"
+      class="ms-2 hidden"
       inset
       vertical
     ></v-divider>
