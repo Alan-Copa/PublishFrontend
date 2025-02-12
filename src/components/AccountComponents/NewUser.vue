@@ -2,12 +2,13 @@
 
 <v-container class="pa-6">
   <v-container class="header-container" fluid>
-      <v-row align="center">
-          <h1 class="display-2">Access Your Account</h1>
-          <v-divider class="inv mr-3" inset vertical></v-divider>
-          <v-icon>mdi-account</v-icon>
-          <v-divider class="inv ms-3" inset vertical></v-divider>
-      </v-row>
+    <v-row align="center" justify="center">
+      <v-divider class="inv mr-3" inset vertical></v-divider>
+      <h1 class="display-2">Access Your Account</h1>
+      <v-divider class="inv mr-3" inset vertical></v-divider>
+      <v-icon>mdi-account</v-icon>
+      <v-divider class="mr-3"></v-divider>
+    </v-row>
   </v-container>
 
     <!-- login content -->

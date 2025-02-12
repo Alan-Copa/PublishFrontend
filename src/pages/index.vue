@@ -4,7 +4,7 @@
   <div class="divAsk">
       <h1 class="display-2 text-center text-primary">Welcome to My Portfolio</h1>
       <p class="text-h6 text-center text-secondary">
-        My favorite projects and technologies.
+        My tech and business projects.
       </p>
       <v-btn large color="primary" class="mt-6" to="/projects">
         See Projects

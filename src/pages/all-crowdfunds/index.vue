@@ -4,9 +4,9 @@
       <v-container class="header-container" fluid>
         <v-row align="center">
           <h1>Crowdfunding Contracts</h1>
-          <v-divider class="mr-3" inset vertical></v-divider>
+          <v-divider class="inv mr-3" inset vertical></v-divider>
           <v-icon>mdi-hand-heart</v-icon>
-          <v-divider class="ms-3" inset vertical></v-divider>
+          <v-divider class="inv ms-3" inset vertical></v-divider>
         </v-row>
       </v-container>
   
@@ -149,5 +149,8 @@
   </script>
   
   <style scoped>
+  .inv {
+  opacity: 0;
+}
   </style>
   
