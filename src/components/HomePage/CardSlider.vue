@@ -19,28 +19,9 @@
             min-width="400"
             min-height="500"
             max-height="500"
-            :disabled="loading"
-            :loading="loading"
             elevation="8"
             color="transparent"
           >
-            <template v-slot:loader="{ isActive }">
-              <v-progress-linear
-                :active="isActive"
-                color="deep-purple"
-                height="4"
-                indeterminate
-              ></v-progress-linear>
-            </template>
-
-            <!-- Project Title -->
-            <v-card-item>
-              <v-card-title class="text-h5 font-weight-bold">
-                {{ slides[n - 1].title }}
-              </v-card-title>
-              <v-divider class="my-2"></v-divider>
-            </v-card-item>
-
             <!-- Project Image -->
             <v-img
               :src="`/projects/${slides[n - 1].imgname}`"
@@ -50,6 +31,22 @@
               class="my-2"
             ></v-img>
 
+            <!-- Project Title & Subtitle -->
+            <v-card-item>
+              <v-card-title class="text-h5 font-weight-bold">
+                {{ slides[n - 1].title }}
+              </v-card-title>
+              <v-card-subtitle>
+                <span class="me-1">Featured Project</span>
+                <v-icon color="primary" icon="mdi-star-circle" size="small"></v-icon>
+                <br>
+                <span class="me-1">{{ slides[n - 1].year }} - {{ slides[n - 1].type }}</span>
+                <v-icon v-if="slides[n - 1].type === 'Company'" color="blue" icon="mdi-office-building" size="small"></v-icon>
+                <v-icon v-else-if="slides[n - 1].type === 'University'" color="green" icon="mdi-school" size="small"></v-icon>
+                <v-icon v-else color="purple" icon="mdi-account" size="small"></v-icon>
+              </v-card-subtitle>
+            </v-card-item>
+
             <!-- Project Description -->
             <v-card-text>
               <p class="text-body-1">
@@ -57,16 +54,18 @@
               </p>
             </v-card-text>
 
-            <!-- Learn More Button -->
-            <v-card-actions>
+            <!-- card actions -->
+            <v-card-actions class="d-flex justify-center">
               <v-btn
                 color="deep-purple-lighten-2"
-                text="Learn More"
-                block
-                border
-                @click="handleClick"
-              ></v-btn>
+                variant="elevated"
+                to="/projects"
+                prepend-icon="mdi-arrow-right-circle"
+              >
+                Learn More
+              </v-btn>
             </v-card-actions>
+            
           </v-card>
 
           <!-- Next Slide Button -->
@@ -94,25 +93,115 @@
   </v-card>
 </template>
 
----
-
-### **🔹 Script (No Changes)**
-```vue
 <script setup>
 import { ref } from "vue";
 
 const slides = ref([
-  { title: "Smart Contracts: Crowdfunding", content: "Ethereum-based smart contracts", imgname: "crwdf.png" },
-  { title: "Smart Estate", content: "A blockchain-based real estate platform", imgname: "smart-estate.png" },
-  { title: "Data Visualization Portfolio", content: "Interactive Data Visualization Portfolio", imgname: "dataviz.png" },
-  { title: "AI Chatbot", content: "Secure AI Chatbot running on your device", imgname: "ai.png" },
-  { title: "Customer Relationship Management", content: "A CRM system I developed for a company", imgname: "CRM.png" },
-  { title: "PDF Manipulator", content: "Secure PDF Manipulator running on your device", imgname: "PDF.png" },
-  { title: "Map", content: "Interactive Map", imgname: "map.png" },
-  { title: "My Terminal", content: "My zshrc custom terminal", imgname: "terminal.png" },
-  { title: "Instagram Bot", content: "Bot to count followers on Instagram", imgname: "insta.png" },
-  { title: "Shutdown Script", content: "Script triggered on Windows shutdown", imgname: "shutdown.png" },
-  { title: "Philosophy", content: "Just.. Philosophy", imgname: "philosophy.png" },
+  {
+    title: "Machine Learning Code",
+    content: "Jupyter Notebook projects including Neural Networks, Image Classification, and multiple Regression models.",
+    imgname: "mlNotebook.png",
+    year: 2024,
+    type: "University",
+  },
+  {
+    title: "Smart Estate",
+    content: "A blockchain-based real estate platform leveraging smart contracts for fractional ownership.",
+    imgname: "smart-estate.png",
+    year: 2024,
+    type: "University",
+  },
+  {
+    title: "Smart Contracts: Crowdfunding",
+    content: "Ethereum-based smart contracts for crowdfunding.",
+    imgname: "crwdf.png",
+    year: 2024,
+    type: "Personal",
+  },
+  {
+    title: "Data Visualization Portfolio",
+    content: "Interactive Data Visualization Portfolio applying best practices for effective data communication.",
+    imgname: "dataviz.png",
+    year: 2024,
+    type: "University",
+  },
+  {
+    title: "Slite.ai",
+    content: "A startup revolutionizing urban food and grocery delivery through autonomous rovers.",
+    imgname: "slite-ai.png",
+    year: 2024,
+    type: "University",
+  },
+  {
+    title: "AI Chatbot",
+    content: "Secure AI Chatbot running on your device.",
+    imgname: "ai.png",
+    year: 2024,
+    type: "Personal",
+  },
+  {
+    title: "Customer Relationship Management",
+    content: "A CRM system for optimizing internal operations and improving customer management.",
+    imgname: "CRM.png",
+    year: 2023,
+    type: "Company",
+  },
+  {
+    title: "VRtual Arena",
+    content: "A virtual reality (VR) experience reimagining sports entertainment.",
+    imgname: "VRtual-arena.png",
+    year: 2023,
+    type: "University",
+  },
+  {
+    title: "Retrieval System",
+    content: "A Python web scraper indexing house rental listings with Solr, with search via an Express.js frontend.",
+    imgname: "webCrawler.png",
+    year: 2023,
+    type: "University",
+  },
+  {
+    title: "Telegram Bot",
+    content: "Telegram bot to register users.",
+    imgname: "telegram.png",
+    year: 2023,
+    type: "Company",
+  },
+  {
+    title: "PDF Manipulator",
+    content: "Secure PDF Manipulator running on your device.",
+    imgname: "PDF.png",
+    year: 2022,
+    type: "Personal",
+  },
+  {
+    title: "Map",
+    content: "Interactive Map.",
+    imgname: "map.png",
+    year: 2024,
+    type: "Personal",
+  },
+  {
+    title: "My Terminal",
+    content: "My zshrc custom terminal.",
+    imgname: "terminal.png",
+    year: 2024,
+    type: "Personal",
+  },
+  {
+    title: "Instagram Bot",
+    content: "Bot to count followers on Instagram.",
+    imgname: "insta.png",
+    year: 2023,
+    type: "Personal",
+  },
+  {
+    title: "Philosophy",
+    content: "Just.. Philosophy.",
+    imgname: "philosophy.png",
+    year: 2023,
+    type: "Personal",
+  },
 ]);
 
 const onboarding = ref(1);
