@@ -48,7 +48,7 @@
       <v-row justify="center" no-gutters>
         <v-col v-if="GdriveLink" cols="12" class="mb-2">
           <v-btn 
-            color="blue-darken-2"
+            color="yellow-darken-3"
             block
             :href="GdriveLink"
             target="_blank"
@@ -61,7 +61,7 @@
 
         <v-col v-if="GithubLink" cols="12" class="mb-2">
           <v-btn 
-            color="black"
+            color="green"
             block
             :href="GithubLink"
             target="_blank"
@@ -86,7 +86,7 @@
 
         <v-col v-if="PDFpath" cols="12" class="mb-2">
             <v-btn 
-              color="green-darken-2"
+              color="red-darken-2"
               block
               @click="downloadPDF"
               download

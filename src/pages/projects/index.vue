@@ -125,6 +125,17 @@ const slides = ref([
     PDFpath: "/projects/VRtual_Arena.pdf",
     DemoLink: "/book-demo", 
   },
+  {
+    title: "Dystributed System",
+    content: "This repository contains solutions for three coding assignments in a Distributed Systems course (Autumn 2024/25). The assignments focus on building a multi-threaded chat server, transitioning from a client-server architecture to a peer-to-peer communication model.",
+    imgname: "distributed.png",
+    year: 2024,
+    type: "University",
+    GdriveLink: "",
+    GithubLink: "https://github.com/Alan-Copa/MyDistributedSystem",
+    externalLink: "",
+    DemoLink: "/book-demo"
+  },
   { 
     title: "Retrieval System", 
     content: "A Python web scraper that collects and indexes house rental listings with Solr, with search functionality via an Express.js frontend.", 
@@ -193,7 +204,7 @@ const slides = ref([
   },
   {
     title: "Philosophy",
-    content: "just.. Philosophy",
+    content: "Just... Philosophy",
     imgname: "philosophy.png",
     year: 2023,
     type: "Personal",

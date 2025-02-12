@@ -6,16 +6,35 @@
     <p class="text-h6 text-center text-secondary">
       My tech and business projects.
     </p>
-    <v-btn 
-      class="mt-6 see-projects-btn"
-      size="x-large"
-      color="primary"
-      variant="elevated"
-      to="/projects"
-      prepend-icon="mdi-folder-open"
-    >
-      See Projects
-    </v-btn>
+
+    <v-row>
+
+      <v-col>
+        <v-btn 
+          class="mt-6 see-projects-btn"
+          size="x-large"
+          color="primary"
+          variant="elevated"
+          to="/projects"
+          prepend-icon="mdi-folder-open"
+        >
+          See Projects
+        </v-btn>
+      </v-col>
+      <v-col>
+        <v-btn 
+          class="mt-6 about-me-btn"
+          size="x-large"
+          color="secondary"
+          variant="elevated"
+          to="/about-me"
+          prepend-icon="mdi-account-circle"
+        >
+          About Me
+        </v-btn>
+      </v-col>
+
+    </v-row>
   </div>
     
   <!-- Call to Action -->
@@ -49,27 +68,32 @@
         </div>
 
         <v-divider class="mt-10"></v-divider> -->
-  
   </template>
   
   <script setup>
+import { VRow } from 'vuetify/components';
+
   // Placeholder if needed
   </script>
   
   <style scoped>
   
   .divAsk {
-    height:"600px";
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 7em;
+    margin: 5em;
   }
 
   h1 {
     font-size: 2.5em;
+  }
+
+  .see-projects-btn, .about-me-btn {
+    min-width: 260px;
+    min-height: 60px;
   }
   
   </style>

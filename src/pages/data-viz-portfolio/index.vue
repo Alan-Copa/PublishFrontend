@@ -22,7 +22,7 @@
       <v-row justify="center" class="mb-6">
         <v-col cols="auto">
           <v-btn 
-            color="green-darken-2" 
+            color="red-darken-2" 
             variant="tonal"
             prepend-icon="mdi-download"
             @click="downloadPDF"
@@ -33,7 +33,7 @@
   
         <v-col cols="auto">
           <v-btn 
-            color="deep-purple-darken-2" 
+            color="yellow-darken-3"
             variant="tonal"
             prepend-icon="mdi-google-drive"
             href="https://drive.google.com/drive/folders/1Ac0FJFM4y7TdbStMB_de9SxDjQRx85b1?usp=sharing"

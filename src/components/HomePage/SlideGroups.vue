@@ -114,7 +114,7 @@ const features = [
   },
   {
     title: "Philosophy",
-    description: "just.. Philosophy",
+    description: "Just... Philosophy",
     icon: "mdi-lightbulb-outline",
   },
 ];

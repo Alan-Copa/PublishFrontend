@@ -154,6 +154,13 @@ const slides = ref([
     type: "University",
   },
   {
+    title: "Distributed System",
+    content: "Distributed Systems examples, covering multi-threaded chat servers and peer-to-peer communication.",
+    imgname: "distributed.png",
+    year: 2024,
+    type: "University",
+  },
+  {
     title: "Retrieval System",
     content: "A Python web scraper indexing house rental listings with Solr, with search via an Express.js frontend.",
     imgname: "webCrawler.png",
@@ -197,7 +204,7 @@ const slides = ref([
   },
   {
     title: "Philosophy",
-    content: "Just.. Philosophy.",
+    content: "Just... Philosophy.",
     imgname: "philosophy.png",
     year: 2023,
     type: "Personal",

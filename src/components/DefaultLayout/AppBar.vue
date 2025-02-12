@@ -3,10 +3,10 @@
 
     <!-- Logo -->
     <v-btn icon variant="text" class="ms-2" nav>
-      <v-icon>mdi-rocket</v-icon>
+      <v-icon @click="goToHome">mdi-rocket</v-icon>
     </v-btn>
     <v-btn class="mr-4" nav>
-      <v-toolbar-title>Alan Copa's Portfolio</v-toolbar-title>
+      <v-toolbar-title @click="goToHome">Alan Copa's Portfolio</v-toolbar-title>
     </v-btn>
 
     <!-- Spacer to center the search bar -->
@@ -41,7 +41,7 @@
     </v-btn>
 
     <v-divider
-      class="ms-0"
+      class="mr-2"
       inset
       vertical
     ></v-divider>
@@ -59,20 +59,15 @@
 
     <!-- User Information -->
     <v-list-item
-        append-avatar="https://randomuser.me/api/portraits/men/3.jpg"
-        title=""
-        nav
-      >
-        <!-- <template v-slot:append>
-          <v-btn
-            icon="mdi-chevron-left"
-            variant="text"
-            @click.stop="rail = !rail"
-          ></v-btn>
-        </template> -->
-      </v-list-item>
+      nav
+      @click="goToAboutMe"
+    >
+      <v-avatar size="45">
+        <v-img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Profile Picture"></v-img>
+      </v-avatar>
+    </v-list-item>
 
-      <v-divider
+    <v-divider
       class="ms-2 hidden"
       inset
       vertical
@@ -85,6 +80,7 @@
 import {ref, watch} from "vue";
 import {useTheme} from "vuetify";
 import LoginWithMetaMask from '@/components/AccountComponents/LoginWithMetaMask.vue';
+import router from "@/router";
 
 // Access Vuetify's instance
 const theme = useTheme(); // Access Vuetify's theme object
@@ -105,6 +101,15 @@ watch(
 const toggleTheme = () => {
   // theme.global.name.value = currentTheme.value === "dark" ? "light" : "dark";
   theme.global.name.value = isDarkTheme.value ? "light" : "dark";
+};
+
+// Go to Home
+const goToHome = () => {
+  router.push("/");
+};
+// Go to About Me
+const goToAboutMe = () => {
+  router.push("/about-me");
 };
 </script>
 
