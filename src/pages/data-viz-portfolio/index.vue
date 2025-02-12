@@ -3,11 +3,11 @@
       <!-- Header -->
       <v-container class="header-container" fluid>
         <v-row align="center" justify="center">
-          <v-icon size="36" color="primary">mdi-chart-bar</v-icon>
-          <v-divider class="inv mx-3" inset vertical></v-divider>
-          <h1 class="text-h4 font-weight-bold">My Data Visualizations Portfolio</h1>
-          <v-divider class="inv mx-3" inset vertical></v-divider>
-          <v-icon size="36" color="primary">mdi-chart-bar</v-icon>
+          <v-divider class="inv mr-3" inset vertical></v-divider>
+          <h1 class="display-2">My Data Visualizations Portfolio</h1>
+          <v-divider class="inv mr-3" inset vertical></v-divider>
+          <v-icon>mdi-chart-bar</v-icon>
+          <v-divider class="mr-3"></v-divider>
         </v-row>
       </v-container>
   

@@ -1,11 +1,12 @@
 <template>
   <v-container class="pa-6">
     <v-container class="header-container" fluid>
-        <v-row align="center">
+        <v-row align="center" justify="center">
             <h1 class="display-2">My Projects</h1>
             <v-divider class="inv mr-3" inset vertical></v-divider>
             <v-icon>mdi-projector-screen</v-icon>
-            <v-divider class="inv ms-3" inset vertical></v-divider>
+            <v-divider class="inv mr-3" inset vertical></v-divider>
+            <v-divider class="mr-3"></v-divider>
         </v-row>
     </v-container>
 
@@ -202,7 +203,6 @@ const slides = ref([
     DemoLink: "/book-demo"
   },
 ]);
-
 
 </script>
 
