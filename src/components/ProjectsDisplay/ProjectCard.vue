@@ -53,6 +53,7 @@
             :href="GdriveLink"
             target="_blank"
             prepend-icon="mdi-google-drive"
+            border
           >
             Google Drive
           </v-btn>
@@ -65,6 +66,7 @@
             :href="GithubLink"
             target="_blank"
             prepend-icon="mdi-github"
+            border
           >
             GitHub Repository
           </v-btn>
@@ -76,30 +78,32 @@
             block
             :href="externalLink"
             prepend-icon="mdi-open-in-new"
+            border
           >
             Try it out!
           </v-btn>
         </v-col>
 
-        <v-col v-if="PDFpath" cols="12">
+        <v-col v-if="PDFpath" cols="12" class="mb-2">
             <v-btn 
               color="green-darken-2"
               block
               @click="downloadPDF"
               download
               prepend-icon="mdi-download"
+              border
             >
               Download PDF
             </v-btn>
-          </v-col>
+        </v-col>
 
-
-        <v-col v-if="DemoLink" cols="12">
+        <v-col v-if="DemoLink" cols="12" class="mb-2">
           <v-btn 
             color="deep-purple-accent-4"
             block
             :to="DemoLink"
             prepend-icon="mdi-calendar-check"
+            border
           >
             Book Demo
           </v-btn>
@@ -150,7 +154,7 @@ const downloadPDF = () => {
 
 /* Hover effect */
 .projectCard:hover {
-  /* backdrop-filter: blur(15px); */
+  backdrop-filter: blur(15px);
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }

@@ -2,47 +2,29 @@
 
   <!-- welcome -->
   <div class="divAsk">
-      <h1 class="display-2 text-center text-primary">Welcome to My Portfolio</h1>
-      <p class="text-h6 text-center text-secondary">
-        My tech and business projects.
-      </p>
-      <v-btn large color="primary" class="mt-6" to="/projects">
-        See Projects
-      </v-btn>  
-      <!-- <v-btn large color="primary" class="mt-6" href="/account">
-        Sync Wallet
-      </v-btn> -->
-    </div>
+    <h1 class="display-2 text-center text-primary">Welcome to My Portfolio</h1>
+    <p class="text-h6 text-center text-secondary">
+      My tech and business projects.
+    </p>
+    <v-btn 
+      class="mt-6 see-projects-btn"
+      size="x-large"
+      color="primary"
+      variant="elevated"
+      to="/projects"
+      prepend-icon="mdi-folder-open"
+    >
+      See Projects
+    </v-btn>
+  </div>
     
   <!-- Call to Action -->
-  <!-- <div class="divAsk">
-          <h1 class="display-2 text-center text-primary">Start Investing Today</h1>
-          <p class="text-h6 text-center text-secondary">
-            Explore the world of decentralized real estate ownership.
-            </p>
-            <v-btn large color="primary" class="mt-6" href="/uploadUnit">
-              Tokenize!
-            </v-btn>
-        </div> -->
        
-  
-        <div class="divAsk">
-          <h1 class="display-2 text-center text-primary">Overview of My Projects</h1>
-          <CardSlider></CardSlider>
-        </div>
-        <!-- <div class="divAsk">
-          <SlideGroups></SlideGroups>
-        </div> -->
-  
-        <!-- <div class="divAsk">
-          <h1 class="display-2 text-center text-primary">Explore on the Map!</h1>
-          <p class="text-h6 text-center text-secondary">
-            
-          </p>
-          <v-btn large color="primary" class="mt-6" href="/map">
-            Explore Properties
-          </v-btn>
-        </div> -->
+  <!-- Project card slider -->
+  <div class="divAsk">
+    <h1 class="display-2 text-center text-primary">Overview of My Projects</h1>
+    <CardSlider></CardSlider>
+  </div>
   
         <!-- Features Section -->
      <!-- <div fluid>
