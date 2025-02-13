@@ -4,88 +4,91 @@
   progress="primary"
   hide-delimiters
   cycle
-  show-arrows
   v-model="activeSlide"
 >
+  <!-- Previous Slide Button -->
+  <template v-slot:prev="{ props }">
+    <v-btn
+      icon="mdi-chevron-left"
+      variant="plain"
+      size="x-large"
+      class="mx-4 nav-btn"
+      @click="prev"
+      border
+    ></v-btn>
+  </template>
+  
+
+
   <v-carousel-item
     v-for="(project, i) in slides"
     :key="i"
   >
-    <v-sheet height="100%" color="transparent">
-      <div class="d-flex fill-height justify-center align-center">
-        <!-- Previous Slide Button -->
-        <v-btn
-            icon="mdi-chevron-left"
-            variant="plain"
-            size="x-large"
-            class="mx-4 nav-btn"
-            @click="prev"
-          ></v-btn>
+    <!-- Project Card -->
+    <v-card
+      class="projectCard mx-auto my-12 pa-4"
+      max-width="400"
+      min-width="400"
+      min-height="500"
+      max-height="500"
+      elevation="8"
+      color="transparent"
+    >
+      <v-img
+        :src="`/projects/${project.imgname}`"
+        alt="Project"
+        height="200"
+        cover
+        class="my-2"
+      ></v-img>
 
-        <!-- Project Card -->
-        <v-card
-          class="projectCard mx-auto my-12 pa-4"
-          max-width="400"
-          min-width="400"
-          min-height="500"
-          max-height="500"
-          elevation="8"
-          color="transparent"
+      <v-card-item>
+        <v-card-title class="text-h5 font-weight-bold">
+          {{ project.title }}
+        </v-card-title>
+        <v-card-subtitle>
+          <span class="me-1">Featured Project</span>
+          <v-icon color="primary" icon="mdi-star-circle" size="small"></v-icon>
+          <br>
+          <span class="me-1">{{ project.year }} - {{ project.type }}</span>
+          <v-icon v-if="project.type === 'Company'" color="blue" icon="mdi-office-building" size="small"></v-icon>
+          <v-icon v-else-if="project.type === 'University'" color="green" icon="mdi-school" size="small"></v-icon>
+          <v-icon v-else color="purple" icon="mdi-account" size="small"></v-icon>
+        </v-card-subtitle>
+      </v-card-item>
+
+      <v-card-text>
+        <p class="text-body-1">
+          {{ project.content }}
+        </p>
+      </v-card-text>
+
+      <v-card-actions class="d-flex justify-center">
+        <v-btn
+          color="deep-purple-lighten-2"
+          variant="elevated"
+          to="/projects"
+          prepend-icon="mdi-arrow-right-circle"
         >
-          <v-img
-            :src="`/projects/${project.imgname}`"
-            alt="Project"
-            height="200"
-            cover
-            class="my-2"
-          ></v-img>
-
-          <v-card-item>
-            <v-card-title class="text-h5 font-weight-bold">
-              {{ project.title }}
-            </v-card-title>
-            <v-card-subtitle>
-              <span class="me-1">Featured Project</span>
-              <v-icon color="primary" icon="mdi-star-circle" size="small"></v-icon>
-              <br>
-              <span class="me-1">{{ project.year }} - {{ project.type }}</span>
-              <v-icon v-if="project.type === 'Company'" color="blue" icon="mdi-office-building" size="small"></v-icon>
-              <v-icon v-else-if="project.type === 'University'" color="green" icon="mdi-school" size="small"></v-icon>
-              <v-icon v-else color="purple" icon="mdi-account" size="small"></v-icon>
-            </v-card-subtitle>
-          </v-card-item>
-
-          <v-card-text>
-            <p class="text-body-1">
-              {{ project.content }}
-            </p>
-          </v-card-text>
-
-          <v-card-actions class="d-flex justify-center">
-            <v-btn
-              color="deep-purple-lighten-2"
-              variant="elevated"
-              to="/projects"
-              prepend-icon="mdi-arrow-right-circle"
-            >
-              Learn More
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-
-        <!-- Next Slide Button -->
-        <v-btn
-            icon="mdi-chevron-right"
-            variant="plain"
-            size="x-large"
-            class="mx-4 nav-btn"
-            @click="next"
-          ></v-btn>
-      </div>
-    </v-sheet>
+          Learn More
+        </v-btn>
+      </v-card-actions>
+    </v-card>
   </v-carousel-item>
-</v-carousel>
 
+  <!-- Next Slide Button -->
+  <template v-slot:next="{ props }">
+    <v-btn
+      icon="mdi-chevron-right"
+      variant="plain"
+      size="x-large"
+      class="mx-4 nav-btn"
+      @click="next"
+      border
+    ></v-btn>
+  </template>
+
+</v-carousel>
 </template>
 
 <script setup>
