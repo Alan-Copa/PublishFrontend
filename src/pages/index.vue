@@ -99,7 +99,7 @@ h1 {
 
 .control-width {
   margin-top: 1em;
-  width: 60%;
+  width: 50em;
 }
 
 </style>
