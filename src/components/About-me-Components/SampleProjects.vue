@@ -14,7 +14,7 @@
                 <v-btn
                     color="blue-darken-2"
                     variant="elevated"
-                    :to="`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`"
+                    :to="`/projects`"
                     prepend-icon="mdi-arrow-right-circle"
                 >
                     Learn More
