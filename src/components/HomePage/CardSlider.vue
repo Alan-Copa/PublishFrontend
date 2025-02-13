@@ -1,10 +1,20 @@
 <template>
-  <v-card rounded="0" flat color="transparent">
-    <v-window v-model="onboarding">
-      <v-window-item v-for="n in slides.length" :key="`card-${n}`" :value="n">
-        <v-row class="d-flex justify-center align-center">
-          <!-- Previous Slide Button -->
-          <v-btn
+<v-carousel
+  height="550"
+  progress="primary"
+  hide-delimiters
+  cycle
+  show-arrows
+  v-model="activeSlide"
+>
+  <v-carousel-item
+    v-for="(project, i) in slides"
+    :key="i"
+  >
+    <v-sheet height="100%" color="transparent">
+      <div class="d-flex fill-height justify-center align-center">
+        <!-- Previous Slide Button -->
+        <v-btn
             icon="mdi-chevron-left"
             variant="plain"
             size="x-large"
@@ -12,89 +22,85 @@
             @click="prev"
           ></v-btn>
 
-          <!-- Project Card -->
-          <v-card
-            class="projectCard mx-auto my-12 pa-4"
-            max-width="400"
-            min-width="400"
-            min-height="500"
-            max-height="500"
-            elevation="8"
-            color="transparent"
-          >
-            <!-- Project Image -->
-            <v-img
-              :src="`/projects/${slides[n - 1].imgname}`"
-              alt="Project"
-              height="200"
-              cover
-              class="my-2"
-            ></v-img>
+        <!-- Project Card -->
+        <v-card
+          class="projectCard mx-auto my-12 pa-4"
+          max-width="400"
+          min-width="400"
+          min-height="500"
+          max-height="500"
+          elevation="8"
+          color="transparent"
+        >
+          <v-img
+            :src="`/projects/${project.imgname}`"
+            alt="Project"
+            height="200"
+            cover
+            class="my-2"
+          ></v-img>
 
-            <!-- Project Title & Subtitle -->
-            <v-card-item>
-              <v-card-title class="text-h5 font-weight-bold">
-                {{ slides[n - 1].title }}
-              </v-card-title>
-              <v-card-subtitle>
-                <span class="me-1">Featured Project</span>
-                <v-icon color="primary" icon="mdi-star-circle" size="small"></v-icon>
-                <br>
-                <span class="me-1">{{ slides[n - 1].year }} - {{ slides[n - 1].type }}</span>
-                <v-icon v-if="slides[n - 1].type === 'Company'" color="blue" icon="mdi-office-building" size="small"></v-icon>
-                <v-icon v-else-if="slides[n - 1].type === 'University'" color="green" icon="mdi-school" size="small"></v-icon>
-                <v-icon v-else color="purple" icon="mdi-account" size="small"></v-icon>
-              </v-card-subtitle>
-            </v-card-item>
+          <v-card-item>
+            <v-card-title class="text-h5 font-weight-bold">
+              {{ project.title }}
+            </v-card-title>
+            <v-card-subtitle>
+              <span class="me-1">Featured Project</span>
+              <v-icon color="primary" icon="mdi-star-circle" size="small"></v-icon>
+              <br>
+              <span class="me-1">{{ project.year }} - {{ project.type }}</span>
+              <v-icon v-if="project.type === 'Company'" color="blue" icon="mdi-office-building" size="small"></v-icon>
+              <v-icon v-else-if="project.type === 'University'" color="green" icon="mdi-school" size="small"></v-icon>
+              <v-icon v-else color="purple" icon="mdi-account" size="small"></v-icon>
+            </v-card-subtitle>
+          </v-card-item>
 
-            <!-- Project Description -->
-            <v-card-text>
-              <p class="text-body-1">
-                {{ slides[n - 1].content }}
-              </p>
-            </v-card-text>
+          <v-card-text>
+            <p class="text-body-1">
+              {{ project.content }}
+            </p>
+          </v-card-text>
 
-            <!-- card actions -->
-            <v-card-actions class="d-flex justify-center">
-              <v-btn
-                color="deep-purple-lighten-2"
-                variant="elevated"
-                to="/projects"
-                prepend-icon="mdi-arrow-right-circle"
-              >
-                Learn More
-              </v-btn>
-            </v-card-actions>
-            
-          </v-card>
+          <v-card-actions class="d-flex justify-center">
+            <v-btn
+              color="deep-purple-lighten-2"
+              variant="elevated"
+              to="/projects"
+              prepend-icon="mdi-arrow-right-circle"
+            >
+              Learn More
+            </v-btn>
+          </v-card-actions>
+        </v-card>
 
-          <!-- Next Slide Button -->
-          <v-btn
+        <!-- Next Slide Button -->
+        <v-btn
             icon="mdi-chevron-right"
             variant="plain"
             size="x-large"
             class="mx-4 nav-btn"
             @click="next"
           ></v-btn>
-        </v-row>
-      </v-window-item>
-    </v-window>
+      </div>
+    </v-sheet>
+  </v-carousel-item>
+</v-carousel>
 
-    <!-- Navigation Dots -->
-    <v-card-actions class="justify-space-between">
-      <v-btn icon="mdi-chevron-left" variant="plain" @click="prev"></v-btn>
-      <v-item-group v-model="onboarding" class="text-center" mandatory>
-        <v-item v-for="n in slides.length" :key="`btn-${n}`" v-slot="{ isSelected, toggle }" :value="n">
-          <v-btn :variant="isSelected ? 'outlined' : 'text'" icon="mdi-record" @click="toggle"></v-btn>
-        </v-item>
-      </v-item-group>
-      <v-btn icon="mdi-chevron-right" variant="plain" @click="next"></v-btn>
-    </v-card-actions>
-  </v-card>
 </template>
 
 <script setup>
 import { ref } from "vue";
+
+const activeSlide = ref(0);
+
+const next = () => {
+  activeSlide.value = (activeSlide.value + 1) % slides.value.length;
+};
+
+const prev = () => {
+  activeSlide.value = (activeSlide.value - 1 + slides.value.length) % slides.value.length;
+};
+
 
 const slides = ref([
   {
@@ -210,23 +216,6 @@ const slides = ref([
     type: "Personal",
   },
 ]);
-
-const onboarding = ref(1);
-
-const next = () => {
-  onboarding.value = onboarding.value + 1 > slides.value.length ? 1 : onboarding.value + 1;
-};
-
-const prev = () => {
-  onboarding.value = onboarding.value - 1 <= 0 ? slides.value.length : onboarding.value - 1;
-};
-
-const loading = ref(false);
-
-const handleClick = () => {
-  loading.value = true;
-  setTimeout(() => (loading.value = false), 2000);
-};
 </script>
 
 <style scoped>
@@ -244,29 +233,12 @@ const handleClick = () => {
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* 🔹 Navigation Buttons */
-.nav-btn {
-  font-size: 3rem;
-  width: 80px;
-  height: 80px;
-}
-
 /* 🔹 Ensuring Fixed Card Size */
 .projectCard {
   min-width: 400px;
   max-width: 400px;
   min-height: 500px;
   max-height: 500px;
-}
-
-/* 🔹 Center Text */
-.text-center {
-  text-align: center;
-}
-
-/* 🔹 Bold Title */
-.font-weight-bold {
-  font-weight: bold;
 }
 
 /* 🔹 Improve Readability */

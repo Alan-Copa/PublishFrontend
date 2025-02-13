@@ -41,8 +41,10 @@
        
   <!-- Project card slider -->
   <div class="divAsk">
-    <h1 class="display-2 text-center text-primary">Overview of My Projects</h1>
-    <CardSlider></CardSlider>
+    <div class="text-center">
+      <h1 class="display-2 text-center text-primary">Overview of My Projects</h1>
+      <CardSlider></CardSlider>
+    </div>
   </div>
   
         <!-- Features Section -->
