@@ -1,80 +1,42 @@
 <template>
-  <v-app-bar app color="transparent">
+  <v-app-bar app class="blur d-none d-md-flex" color="transparent">
 
     <!-- Logo -->
-    <v-btn icon variant="text" class="ms-2" nav>
-      <v-icon @click="goToHome">mdi-rocket</v-icon>
+    <v-btn icon variant="text" class="ms-2" nav @click="goToHome">
+      <v-icon>mdi-rocket</v-icon>
     </v-btn>
-    <v-btn class="mr-4" nav>
-      <v-toolbar-title @click="goToHome">Alan Copa's Portfolio</v-toolbar-title>
+    <v-btn class="mr-4" nav @click="goToHome">
+      <v-toolbar-title>Alan Copa's Portfolio</v-toolbar-title>
     </v-btn>
 
-    <!-- Spacer to center the search bar -->
     <v-spacer></v-spacer>
 
-    <!--Chat with AI chatbot -->
+    <!-- Desktop Navbar -->
+    <RowNavbar />
 
-    <!-- navbar -->
-    <RowNavbar/>
-
-    <!-- Spacer to push icons and login to the right -->
     <v-spacer></v-spacer>
 
-    <v-divider
-      class="ms-0"
-      inset
-      vertical
-    ></v-divider>
-
-    <!-- Theme Toggle Button -->
+    <!-- Theme Toggle -->
     <v-btn icon variant="text" @click="toggleTheme">
       <v-icon>{{ currentTheme === 'dark' ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
     </v-btn>
 
-    <!-- Icons -->
     <v-btn icon variant="text">
       <v-icon>mdi-bell</v-icon>
     </v-btn>
-
     <v-btn icon variant="text">
       <v-icon>mdi-cog</v-icon>
     </v-btn>
 
-    <v-divider
-      class="mr-2"
-      inset
-      vertical
-    ></v-divider>
-
-    <!-- Login Button -->
-    <!-- <div>
-      <LoginWithMetaMask/>
-    </div> -->
-
-    <!-- <v-divider
-      class="ms-0"
-      inset
-      vertical
-    ></v-divider> -->
-
-    <!-- User Information -->
-    <v-list-item
-      nav
-      @click="goToAboutMe"
-    >
+    <!-- User Avatar -->
+    <v-list-item nav @click="goToAboutMe">
       <v-avatar size="45">
         <v-img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Profile Picture"></v-img>
       </v-avatar>
     </v-list-item>
-
-    <v-divider
-      class="ms-2 hidden"
-      inset
-      vertical
-    ></v-divider>
-
   </v-app-bar>
 </template>
+
 
 <script setup>
 import {ref, watch} from "vue";
@@ -116,6 +78,10 @@ const goToAboutMe = () => {
 <style scoped>
 .app-bar-search {
   max-width: 400px;
+}
+
+.blur {
+  backdrop-filter: blur(10px);
 }
 
 .hidden {
