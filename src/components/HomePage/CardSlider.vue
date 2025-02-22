@@ -27,10 +27,6 @@
     <!-- Project Card -->
     <v-card
       class="projectCard mx-auto my-12 pa-4"
-      max-width="400"
-      min-width="400"
-      min-height="500"
-      max-height="500"
       elevation="8"
       color="transparent"
     >
@@ -238,10 +234,10 @@ const slides = ref([
 
 /* 🔹 Ensuring Fixed Card Size */
 .projectCard {
-  /* min-width: 400px;
+  min-width: 370px;
   max-width: 400px;
   min-height: 500px;
-  max-height: 500px; */
+  max-height: 500px;
 }
 
 /* 🔹 Improve Readability */
