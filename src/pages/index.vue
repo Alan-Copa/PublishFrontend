@@ -53,10 +53,12 @@
        
   <!-- Project card slider -->
   <div class="divStandard">
-    <div class="control-width">
-      <h1 class="display-2 text-center text-primary">Overview of My Projects</h1>
-      <CardSlider></CardSlider>
-    </div>
+    <v-row class="desktop">
+      <v-col>
+        <h1 class="display-2 text-center text-primary">Overview of My Projects</h1>
+        <CardSlider></CardSlider>
+      </v-col>
+    </v-row>
   </div>
 
 </template>
@@ -75,6 +77,7 @@ import { VRow } from 'vuetify/components';
   align-items: center;
   text-align: center;
   margin: 5em;
+  margin-top: 3em;
 }
 
 h1 {
@@ -85,10 +88,10 @@ h1 {
   min-width: 260px;
   min-height: 60px;
 }
-
-.control-width {
-  margin-top: 1em;
-  /* width: 30vh; */
+@media (hover: hover) and (pointer: fine) {
+.desktop {
+  width: 50em;
+}
 }
 
 </style>

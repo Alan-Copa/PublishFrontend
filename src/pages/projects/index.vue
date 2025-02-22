@@ -34,6 +34,7 @@
 </template>
 
 <script setup>
+import ProjectCard from '@/components/ProjectsDisplay/ProjectCard.vue';
 const slides = ref([
   {
     title: "Machine Learning Code", 
@@ -44,7 +45,7 @@ const slides = ref([
     GdriveLink: "https://drive.google.com/drive/folders/1ThFQPpzWAqsLSTbbSz2m9sYORUowraGx?usp=sharing",
     GithubLink: "https://github.com/Alan-Copa/MyMachineLearning",
     externalLink: "",
-    DemoLink: "/book-demo", 
+    DemoLink: "/contact", 
   },
   { 
     title: "Smart Estate", 
@@ -55,7 +56,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/RealEstate",
     externalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "Smart Contracts: Crowdfunding", 
@@ -66,7 +67,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     externalLink: "/crowdfunding",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "Data Visualization Portfolio", 
@@ -77,7 +78,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/DataVisualizationPortfolio",
     externalLink: "/data-viz-portfolio",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   {
     title: "slite.ai", 
@@ -89,7 +90,7 @@ const slides = ref([
     GithubLink: "",
     externalLink: "",
     PDFpath: "/projects/slite-ai.pdf",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "AI Chatbot", 
@@ -100,7 +101,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     externalLink: "/chatbot",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "Customer Relationship Management", 
@@ -111,7 +112,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/solefid-project",
     externalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "VRtual Arena", 
@@ -123,7 +124,7 @@ const slides = ref([
     GithubLink: "",
     externalLink: "",
     PDFpath: "/projects/VRtual_Arena.pdf",
-    DemoLink: "/book-demo", 
+    DemoLink: "/contact", 
   },
   {
     title: "Dystributed System",
@@ -134,7 +135,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/MyDistributedSystem",
     externalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "Retrieval System", 
@@ -145,7 +146,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/AndreaGualandris/RetrievalSystem",
     externalLink: "",
-    DemoLink: "/book-demo", 
+    DemoLink: "/contact", 
   },
   { 
     title: "Telegram Bot",
@@ -156,7 +157,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     externalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "PDF Manipulator", 
@@ -167,7 +168,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/PDF_Manipulator",
     externalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "Map", 
@@ -178,7 +179,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     externalLink: "/map",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "My Terminal", 
@@ -189,7 +190,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/My_Terminal",
     externalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   { 
     title: "Instagram Bot", 
@@ -200,7 +201,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/Instagram_Bot",
     externalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
   {
     title: "Philosophy",
@@ -211,7 +212,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "  https://github.com/Alan-Copa/antropologic-universalism",
     externalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/contact"
   },
 ]);
 

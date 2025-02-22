@@ -153,9 +153,11 @@ const downloadPDF = () => {
 }
 
 /* Hover effect */
+@media (hover: hover) and (pointer: fine) {
 .projectCard:hover {
   backdrop-filter: blur(15px);
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
 }
 </style>  
