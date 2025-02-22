@@ -35,7 +35,7 @@
       </v-col>
       <v-col>
         <v-btn 
-          class="mt-6 about-me-btn"
+          class="mt-6 contact-me-btn"
           size="x-large"
           color="green"
           variant="elevated"
@@ -58,7 +58,7 @@
       <CardSlider></CardSlider>
     </div>
   </div>
-  
+
 </template>
   
 <script setup>
@@ -81,14 +81,14 @@ h1 {
   font-size: 2.5em;
 }
 
-.see-projects-btn, .about-me-btn {
+.see-projects-btn, .about-me-btn, .contact-me-btn {
   min-width: 260px;
   min-height: 60px;
 }
 
 .control-width {
   margin-top: 1em;
-  width: 30vh;
+  /* width: 30vh; */
 }
 
 </style>
