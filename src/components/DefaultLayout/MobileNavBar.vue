@@ -49,7 +49,7 @@
   <style scoped>
   .mobile-navbar {
     position: fixed;
-    bottom: 0;
+    top: 0;
     width: 100%;
     backdrop-filter: blur(10px);
     background-color: var(--v-theme-secondary); /* Apply 'secondary' theme color */
