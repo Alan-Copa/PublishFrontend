@@ -42,7 +42,7 @@ const drawer = ref(false); // Initialize the drawer as closed
 
 /* Parallax */
 .v-parallax {
-  height: 100vh;
+  /* height: 100vh; */
   /* not scrollable */
 }
 
