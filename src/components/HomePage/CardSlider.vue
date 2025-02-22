@@ -238,15 +238,15 @@ const slides = ref([
 
 /* 🔹 Ensuring Fixed Card Size */
 .projectCard {
-  min-width: 400px;
+  /* min-width: 400px;
   max-width: 400px;
   min-height: 500px;
-  max-height: 500px;
+  max-height: 500px; */
 }
 
 /* 🔹 Improve Readability */
 .text-body-1 {
   margin: 0 auto;
-  max-width: 500px;
+  /* max-width: 500px; */
 }
 </style>

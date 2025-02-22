@@ -24,6 +24,13 @@
           About Me
         </v-btn>
         <v-btn
+          prepend-icon="mdi-email"
+          title="Contact"
+          to="/contact"
+        >
+          Contact
+        </v-btn>
+        <!-- <v-btn
           prepend-icon="mdi-chat"
           title="chatbot"
           to="/chatbot"
@@ -32,7 +39,7 @@
           prepend-icon="mdi-graph"
           title="My Account"
           to="/account"
-        >Access Blockchain</v-btn>
+        >Access Blockchain</v-btn> -->
         
         
         <!-- <v-btn

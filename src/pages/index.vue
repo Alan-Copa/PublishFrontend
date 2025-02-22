@@ -33,6 +33,18 @@
           About Me
         </v-btn>
       </v-col>
+      <v-col>
+        <v-btn 
+          class="mt-6 about-me-btn"
+          size="x-large"
+          color="green"
+          variant="elevated"
+          to="/contact"
+          prepend-icon="mdi-email"
+        >
+          Contact
+        </v-btn>
+      </v-col>
 
     </v-row>
   </div>
@@ -47,29 +59,6 @@
     </div>
   </div>
   
-        <!-- Features Section -->
-     <!-- <div fluid>
-          <h2 class="text-h4 text-center mb-6 text-primary">Our Features</h2>
-          <v-row align="center" justify="center">
-            <v-col cols="12" md="4" class="text-center">
-              <v-icon color="primary" size="64">mdi-home-modern</v-icon>
-              <h3 class="text-h6 mt-4">Innovative Properties</h3>
-              <p>Curated properties registered securely on the blockchain.</p>
-            </v-col>
-            <v-col cols="12" md="4" class="text-center">
-              <v-icon color="primary" size="64">mdi-security</v-icon>
-              <h3 class="text-h6 mt-4">Secure Transactions</h3>
-              <p>Seamless, transparent property transactions via smart contracts.</p>
-            </v-col>
-            <v-col cols="12" md="4" class="text-center">
-              <v-icon color="primary" size="64">mdi-earth</v-icon>
-              <h3 class="text-h6 mt-4">Global Access</h3>
-              <p>Invest and own properties globally from the comfort of your home.</p>
-            </v-col>
-          </v-row>
-        </div>
-
-        <v-divider class="mt-10"></v-divider> -->
 </template>
   
 <script setup>
@@ -99,7 +88,7 @@ h1 {
 
 .control-width {
   margin-top: 1em;
-  width: 50em;
+  width: 30vh;
 }
 
 </style>

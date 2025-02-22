@@ -10,6 +10,14 @@
             <v-btn icon="mdi-github" variant="text" href="https://github.com/Alan-Copa" target="_blank"></v-btn>
             <v-btn icon="mdi-linkedin" variant="text" href="https://www.linkedin.com/in/alan-copa-03776929b/" target="_blank"></v-btn>
             <v-btn icon="mdi-email" variant="text" href="mailto:alan.copa@usi.ch"></v-btn>
+            <v-btn
+          prepend-icon="mdi-email"
+          title="Contact"
+          to="/contact"
+          color="green"
+        >
+          Contact
+        </v-btn>
         </v-card-actions>
     </v-card>
 </template>
