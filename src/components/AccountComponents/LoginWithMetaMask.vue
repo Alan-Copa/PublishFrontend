@@ -2,7 +2,7 @@
 import { useWallet } from '@/composables/useWallet';
 import { email } from '@vuelidate/validators';
 import axios from "axios";
-import { ethers } from 'ethers';
+// import { ethers } from 'ethers';
 const { getWalletAddress, walletAddress, connectWallet, disconnectWallet, truncateAddress } = useWallet();
 
 async function getSignatureAndMessage() {

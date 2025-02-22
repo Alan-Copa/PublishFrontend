@@ -5,6 +5,7 @@
       height="70"
       grow
     >
+
       <!-- Home -->
       <v-btn to="/" class="nav-btn" stacked>
         <v-icon size="30" color="blue-darken-2">mdi-home-city</v-icon>
@@ -17,17 +18,18 @@
         <span class="nav-label">Projects</span>
       </v-btn>
   
-      <!-- Contact -->
-      <v-btn to="/contact" class="nav-btn" stacked>
-        <v-icon size="30" color="green-darken-2">mdi-email</v-icon>
-        <span class="nav-label">Contact</span>
+      <!-- book-demo -->
+      <v-btn to="/book-demo" class="nav-btn" stacked>
+        <v-icon size="30" color="green-darken-2">mdi-calendar</v-icon>
+        <span class="nav-label">Book Demo</span>
       </v-btn>
   
       <!-- About Me -->
       <v-btn to="/about-me" class="nav-btn" stacked>
         <v-icon size="30" color="amber-darken-3">mdi-account</v-icon>
-        <span class="nav-label">About</span>
+        <span class="nav-label">About Me</span>
       </v-btn>
+
     </v-bottom-navigation>
 </template>
 

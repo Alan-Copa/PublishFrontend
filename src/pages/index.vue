@@ -2,7 +2,7 @@
 
   <!-- welcome -->
   <div class="divStandard">
-    <h1 class="display-2 text-center text-primary">Welcome to My Portfolio</h1>
+    <h1 class="display-2 text-center text-primary">Welcome to My Portfolio <v-icon size="36">mdi-rocket-launch</v-icon></h1>
     <p class="text-h6 text-center text-secondary">
       My tech and business projects.
     </p>
@@ -35,14 +35,14 @@
       </v-col>
       <v-col>
         <v-btn 
-          class="mt-6 contact-me-btn"
+          class="mt-6 book-demo-btn"
           size="x-large"
-          color="green"
+          color="deep-purple-accent-4"
           variant="elevated"
-          to="/contact"
-          prepend-icon="mdi-email"
+          to="/book-demo"
+          prepend-icon="mdi-calendar"
         >
-          Contact
+          Book Demo
         </v-btn>
       </v-col>
 
@@ -55,7 +55,7 @@
   <div class="divStandard">
     <v-row class="desktop">
       <v-col>
-        <h1 class="display-2 text-center text-primary">Overview of My Projects</h1>
+        <h1 class="display-2 text-center text-primary">Overview of My Projects <v-icon size="36">mdi-lightbulb-on-outline</v-icon></h1>
         <CardSlider></CardSlider>
       </v-col>
     </v-row>
@@ -84,7 +84,7 @@ h1 {
   font-size: 2.5em;
 }
 
-.see-projects-btn, .about-me-btn, .contact-me-btn {
+.see-projects-btn, .about-me-btn, .book-demo-btn {
   min-width: 260px;
   min-height: 60px;
 }

@@ -5,7 +5,7 @@
           <v-divider class="inv mr-3" inset vertical></v-divider>
             <h1 class="display-2">My Projects</h1>
             <v-divider class="inv mr-3" inset vertical></v-divider>
-            <v-icon>mdi-projector-screen</v-icon>
+            <v-icon size="36">mdi-projector-screen</v-icon>
             <v-divider class="mr-3"></v-divider>
         </v-row>
     </v-container>
@@ -45,7 +45,7 @@ const slides = ref([
     GdriveLink: "https://drive.google.com/drive/folders/1ThFQPpzWAqsLSTbbSz2m9sYORUowraGx?usp=sharing",
     GithubLink: "https://github.com/Alan-Copa/MyMachineLearning",
     externalLink: "",
-    DemoLink: "/contact", 
+    DemoLink: "/book-demo", 
   },
   { 
     title: "Smart Estate", 
@@ -56,7 +56,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/RealEstate",
     externalLink: "",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "Smart Contracts: Crowdfunding", 
@@ -67,7 +67,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     externalLink: "/crowdfunding",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "Data Visualization Portfolio", 
@@ -78,7 +78,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/DataVisualizationPortfolio",
     externalLink: "/data-viz-portfolio",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   {
     title: "slite.ai", 
@@ -90,7 +90,7 @@ const slides = ref([
     GithubLink: "",
     externalLink: "",
     PDFpath: "/projects/slite-ai.pdf",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "AI Chatbot", 
@@ -101,7 +101,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     externalLink: "/chatbot",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "Customer Relationship Management", 
@@ -112,7 +112,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/solefid-project",
     externalLink: "",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "VRtual Arena", 
@@ -124,7 +124,7 @@ const slides = ref([
     GithubLink: "",
     externalLink: "",
     PDFpath: "/projects/VRtual_Arena.pdf",
-    DemoLink: "/contact", 
+    DemoLink: "/book-demo", 
   },
   {
     title: "Dystributed System",
@@ -135,7 +135,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/MyDistributedSystem",
     externalLink: "",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "Retrieval System", 
@@ -146,7 +146,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/AndreaGualandris/RetrievalSystem",
     externalLink: "",
-    DemoLink: "/contact", 
+    DemoLink: "/book-demo", 
   },
   { 
     title: "Telegram Bot",
@@ -157,7 +157,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     externalLink: "",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "PDF Manipulator", 
@@ -168,7 +168,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/PDF_Manipulator",
     externalLink: "",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "Map", 
@@ -179,7 +179,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     externalLink: "/map",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "My Terminal", 
@@ -190,7 +190,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/My_Terminal",
     externalLink: "",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   { 
     title: "Instagram Bot", 
@@ -201,7 +201,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/Instagram_Bot",
     externalLink: "",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
   {
     title: "Philosophy",
@@ -212,7 +212,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "  https://github.com/Alan-Copa/antropologic-universalism",
     externalLink: "",
-    DemoLink: "/contact"
+    DemoLink: "/book-demo"
   },
 ]);
 

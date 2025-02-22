@@ -6,7 +6,7 @@
           <v-divider class="inv mr-3" inset vertical></v-divider>
           <h1 class="display-2">My Data Visualizations Portfolio</h1>
           <v-divider class="inv mr-3" inset vertical></v-divider>
-          <v-icon>mdi-chart-bar</v-icon>
+          <v-icon size="36">mdi-chart-bar</v-icon>
           <v-divider class="mr-3"></v-divider>
         </v-row>
       </v-container>

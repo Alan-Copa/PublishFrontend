@@ -24,11 +24,11 @@
           About Me
         </v-btn>
         <v-btn
-          prepend-icon="mdi-email"
-          title="Contact"
-          to="/contact"
+          prepend-icon="mdi-calendar"
+          title="Book Demo"
+          to="/book-demo"
         >
-          Contact
+          Book Demo
         </v-btn>
         <!-- <v-btn
           prepend-icon="mdi-chat"

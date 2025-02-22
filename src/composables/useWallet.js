@@ -1,5 +1,5 @@
 import { ref, onMounted } from 'vue';
-import { ethers} from 'ethers';
+// import { ethers} from 'ethers';
 
 export function useWallet() {
   const walletAddress = ref(null);
