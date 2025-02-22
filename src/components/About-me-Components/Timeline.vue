@@ -94,10 +94,12 @@ transition: all 0.3s ease-in-out;
 }
 
 /* 🔹 Hover Effect */
+@media (hover: hover) and (pointer: fine) {
 .content-card:hover {
 backdrop-filter: blur(15px);
 transform: scale(1.03);
 box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
 }
 
 /* 🔹 Header Styling */
