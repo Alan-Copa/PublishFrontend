@@ -1,4 +1,16 @@
 <template>
+  <!-- my css layout destroys css making it scrollable -->
+  <v-dialog v-model="loading" persistent max-width="300">
+    <v-list-item
+          prepend-icon="$vuetify-outline"
+          title="Refreshing..."
+    >
+      <template v-slot:append>
+        <ProgressCircular />
+      </template>
+    </v-list-item>
+  </v-dialog>
+
   <div id="map-container">
     <!-- Map -->
     <div id="map"></div>
@@ -41,7 +53,9 @@ let map: leaflet.Map;
 let userGeoMarker: leaflet.Marker;
 
 import { ref } from "vue";
+import ProgressCircular from "@/components/Utils/ProgressCircular.vue";
 const searchQuery = ref("");
+const loading = ref(true);
 const searchLocation = async () => {
   if (!searchQuery.value) return;
 
@@ -129,6 +143,10 @@ onMounted(() => {
 
         nearbyMarkers.value.push({ latitude: lat, longitude: lng });
       });
+      loading.value = false;
+      setTimeout(() => {
+        userGeoMarker.openPopup();
+      }, 1000);
     },
     (error) => {
       console.error("Geolocation error:", error);
@@ -157,6 +175,8 @@ onMounted(() => {
         .marker([userMarker.value.latitude, userMarker.value.longitude])
         .addTo(map)
         .bindPopup("Default Location");
+
+      loading.value = false;
     }
   );
 });
@@ -176,12 +196,24 @@ onMounted(() => {
 
 .map-controls {
   position: absolute;
-  top: 16px;
+  top: 100px;
   left: 69%;
   z-index: 1000; /* Ensure it's above the map */
   background-color: white; /* To ensure readability */
   border-radius: 8px;
   overflow: hidden; /* Keep the panel contents clipped */
   width: 30%;
+}
+/* create new css for mobile */
+@media (max-width: 600px) {
+  .map-controls {
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    z-index: 1000; /* Ensure it's above the map */
+    border-radius: 8px;
+    overflow: hidden; /* Keep the panel contents clipped */
+    width: 100%;
+  }
 }
 </style>

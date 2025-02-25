@@ -76,6 +76,11 @@ const createCrowdfund = async () => {
       alert("Please install Metamask to use this feature!");
       return;
     }
+    // disabled feature
+    if (true) {
+      alert("Sorry, this feature is not available in the this version!");
+      return;
+    }
     // Convert input to the required format
     const goalETH = goal.value.toString();
     const durationInSeconds = parseInt(duration.value) * 24 * 60 * 60;
