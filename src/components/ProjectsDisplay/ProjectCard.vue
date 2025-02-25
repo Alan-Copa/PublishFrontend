@@ -76,7 +76,7 @@
           <v-btn 
             color="blue"
             block
-            :href="externalLink"
+            :to="externalLink"
             prepend-icon="mdi-open-in-new"
             border
           >

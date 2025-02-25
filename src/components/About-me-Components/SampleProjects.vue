@@ -12,7 +12,7 @@
                 <v-card-subtitle>{{ project.year }} - {{ project.type }}</v-card-subtitle>
                 <v-card-actions class="d-flex justify-center">
                 <v-btn
-                    color="blue-darken-2"
+                    color="primary"
                     variant="elevated"
                     :to="`/projects`"
                     prepend-icon="mdi-arrow-right-circle"
