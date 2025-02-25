@@ -24,7 +24,7 @@
           :type="project.type"
           :GdriveLink="project.GdriveLink"
           :GithubLink="project.GithubLink"
-          :externalLink="project.externalLink"
+          :internalLink="project.internalLink"
           :PDFpath="project.PDFpath"
           :DemoLink="project.DemoLink"
         />
@@ -44,7 +44,7 @@ const slides = ref([
     type: "University",
     GdriveLink: "https://drive.google.com/drive/folders/1ThFQPpzWAqsLSTbbSz2m9sYORUowraGx?usp=sharing",
     GithubLink: "https://github.com/Alan-Copa/MyMachineLearning",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo", 
   },
   { 
@@ -55,7 +55,7 @@ const slides = ref([
     type: "University",
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/RealEstate",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo"
   },
   { 
@@ -66,7 +66,7 @@ const slides = ref([
     type: "Personal",
     GdriveLink: "",
     GithubLink: "",
-    externalLink: "/crowdfunding",
+    internalLink: "/crowdfunding",
     DemoLink: "/book-demo"
   },
   { 
@@ -77,7 +77,7 @@ const slides = ref([
     type: "University",
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/DataVisualizationPortfolio",
-    externalLink: "/data-viz-portfolio",
+    internalLink: "/data-viz-portfolio",
     DemoLink: "/book-demo"
   },
   {
@@ -88,7 +88,7 @@ const slides = ref([
     type: "University",
     GdriveLink: "",
     GithubLink: "",
-    externalLink: "",
+    internalLink: "",
     PDFpath: "/projects/slite-ai.pdf",
     DemoLink: "/book-demo"
   },
@@ -100,7 +100,7 @@ const slides = ref([
     type: "Personal",
     GdriveLink: "",
     GithubLink: "",
-    externalLink: "/chatbot",
+    internalLink: "/chatbot",
     DemoLink: "/book-demo"
   },
   { 
@@ -111,7 +111,7 @@ const slides = ref([
     type: "Company",
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/solefid-project",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo"
   },
   { 
@@ -122,7 +122,7 @@ const slides = ref([
     type: "University",
     GdriveLink: "",
     GithubLink: "",
-    externalLink: "",
+    internalLink: "",
     PDFpath: "/projects/VRtual_Arena.pdf",
     DemoLink: "/book-demo", 
   },
@@ -134,7 +134,7 @@ const slides = ref([
     type: "University",
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/MyDistributedSystem",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo"
   },
   { 
@@ -145,7 +145,7 @@ const slides = ref([
     type: "University",
     GdriveLink: "",
     GithubLink: "https://github.com/AndreaGualandris/RetrievalSystem",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo", 
   },
   { 
@@ -156,7 +156,7 @@ const slides = ref([
     type: "Company",
     GdriveLink: "",
     GithubLink: "",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo"
   },
   { 
@@ -167,7 +167,7 @@ const slides = ref([
     type: "Personal",
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/PDF_Manipulator",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo"
   },
   { 
@@ -178,7 +178,7 @@ const slides = ref([
     type: "Personal",
     GdriveLink: "",
     GithubLink: "",
-    externalLink: "/map",
+    internalLink: "/map",
     DemoLink: "/book-demo"
   },
   { 
@@ -189,7 +189,7 @@ const slides = ref([
     type: "Personal",
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/My_Terminal",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo"
   },
   { 
@@ -200,7 +200,7 @@ const slides = ref([
     type: "Personal",
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/Instagram_Bot",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo"
   },
   {
@@ -211,7 +211,7 @@ const slides = ref([
     type: "Personal",
     GdriveLink: "",
     GithubLink: "  https://github.com/Alan-Copa/antropologic-universalism",
-    externalLink: "",
+    internalLink: "",
     DemoLink: "/book-demo"
   },
 ]);

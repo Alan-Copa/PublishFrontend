@@ -58,7 +58,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { ethers } from "ethers";
+// import { ethers } from "ethers";
 import CrowdfundingAbi from "../../../artifacts/contracts/Crowdfunding.json"; // Adjust the path based on your setup
 import axios from "axios";
 import { useRouter } from "vue-router";

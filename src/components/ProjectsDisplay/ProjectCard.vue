@@ -72,11 +72,11 @@
           </v-btn>
         </v-col>
 
-        <v-col v-if="externalLink" cols="12" class="mb-2">
+        <v-col v-if="internalLink" cols="12" class="mb-2">
           <v-btn 
             color="blue"
             block
-            :to="externalLink"
+            :to="internalLink"
             prepend-icon="mdi-open-in-new"
             border
           >
@@ -127,7 +127,7 @@ const props = defineProps({
   type: String,
   GdriveLink: String,
   GithubLink: String,
-  externalLink: String,
+  internalLink: String,
   DemoLink: String,
   PDFpath: String,
 });
