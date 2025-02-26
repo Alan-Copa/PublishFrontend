@@ -12,7 +12,7 @@
     </v-container>
 
     <!-- Schedule a Meeting Form -->
-    <v-form ref="form" v-model="formValid" lazy-validation>
+    <v-form ref="formRef" v-model="formValid" lazy-validation>
       <v-card class="mx-auto content-card pa-6" max-width="500" elevation="8">
         <v-container class="pt-4">
 
@@ -69,10 +69,7 @@
 
           <!-- Time -->
           <v-time-picker
-            format="24hr"
-            color="green-lighten-1"
             v-model="selectedTime"
-            full-width
             :rules="[requiredRule]"
             label="Select Time"
             variant="outlined"
@@ -103,6 +100,10 @@
 
 <script setup>
 import { ref } from "vue";
+import { el } from "vuetify/locale";
+
+const formRef = ref(null);
+const formValid = ref(false);
 
 // Form fields
 const firstName = ref("");
@@ -112,7 +113,6 @@ const meetingPurpose = ref(null);
 const selectedDate = ref(null);
 const selectedTime = ref(null);
 const notes = ref("");
-const formValid = ref(false);
 
 // Meeting purposes
 const meetingPurposes = [
@@ -130,29 +130,30 @@ const emailRule = (value) =>
 
 // Submit function
 const submitMeeting = () => {
-  if (!formValid.value) {
-    alert("Please correct the highlighted errors before submitting.");
-    return;
+  if (formValid.value) {
+    alert(
+      `Meeting Scheduled!\n
+      Name: ${firstName.value} ${surname.value}\n
+      Email: ${email.value}\n
+      Purpose: ${meetingPurpose.value}\n
+      Date: ${selectedDate.value}\n
+      Time: ${selectedTime.value}\n
+      Notes: ${notes.value || "None"}`
+    );
+
+    // Clear form after successful submission
+    firstName.value = null;
+    surname.value = null;
+    email.value = "";
+    meetingPurpose.value = null;
+    selectedDate.value = null;
+    selectedTime.value = null;
+    notes.value = "";
+
+    formRef.value.resetValidation();
+  } else {
+    formRef.value.validate();
   }
-
-  alert(
-    `Meeting Scheduled!\n
-    Name: ${firstName.value} ${surname.value}\n
-    Email: ${email.value}\n
-    Purpose: ${meetingPurpose.value}\n
-    Date: ${selectedDate.value}\n
-    Time: ${selectedTime.value}\n
-    Notes: ${notes.value || "None"}`
-  );
-
-  // Clear form fields after submission
-  firstName.value = "";
-  surname.value = "";
-  email.value = "";
-  meetingPurpose.value = null;
-  selectedDate.value = null;
-  selectedTime.value = null;
-  notes.value = "";
 };
 </script>
 
