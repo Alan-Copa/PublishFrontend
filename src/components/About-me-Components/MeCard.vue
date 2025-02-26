@@ -24,7 +24,7 @@
             <v-btn
               icon="mdi-calendar"
               variant="text"
-              to="/book-demo"
+              to="/schedule"
               color="deep-purple-accent-4"
             >
             </v-btn>

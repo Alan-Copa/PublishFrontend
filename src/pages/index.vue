@@ -35,14 +35,14 @@
       </v-col>
       <v-col>
         <v-btn 
-          class="mt-6 book-demo-btn"
+          class="mt-6 schedule-btn"
           size="x-large"
           color="deep-purple-accent-4"
           variant="elevated"
-          to="/book-demo"
+          to="/Schedule"
           prepend-icon="mdi-calendar"
         >
-          Book Demo
+          Schedule a Meeting
         </v-btn>
       </v-col>
 
@@ -84,7 +84,7 @@ h1 {
   font-size: 2.5em;
 }
 
-.see-projects-btn, .about-me-btn, .book-demo-btn {
+.see-projects-btn, .about-me-btn, .schedule-btn {
   min-width: 260px;
   min-height: 60px;
 }

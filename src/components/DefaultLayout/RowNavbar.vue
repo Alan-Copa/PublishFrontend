@@ -25,10 +25,10 @@
         </v-btn>
         <v-btn
           prepend-icon="mdi-calendar"
-          title="Book Demo"
-          to="/book-demo"
+          title="Schedule a Meeting"
+          to="/schedule"
         >
-          Book Demo
+          Schedule a Meeting
         </v-btn>
         <!-- <v-btn
           prepend-icon="mdi-chat"

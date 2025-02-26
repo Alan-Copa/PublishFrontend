@@ -18,10 +18,10 @@
         <span class="nav-label">Projects</span>
       </v-btn>
   
-      <!-- book-demo -->
-      <v-btn to="/book-demo" class="nav-btn" stacked>
+      <!-- schedule -->
+      <v-btn to="/schedule" class="nav-btn" stacked>
         <v-icon size="30" color="green-darken-2">mdi-calendar</v-icon>
-        <span class="nav-label">Book Demo</span>
+        <span class="nav-label">Schedule</span>
       </v-btn>
   
       <!-- About Me -->

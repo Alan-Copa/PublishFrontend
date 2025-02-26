@@ -45,7 +45,7 @@ const slides = ref([
     GdriveLink: "https://drive.google.com/drive/folders/1ThFQPpzWAqsLSTbbSz2m9sYORUowraGx?usp=sharing",
     GithubLink: "https://github.com/Alan-Copa/MyMachineLearning",
     internalLink: "",
-    DemoLink: "/book-demo", 
+    DemoLink: "/schedule", 
   },
   { 
     title: "Smart Estate", 
@@ -56,7 +56,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/RealEstate",
     internalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "Smart Contracts: Crowdfunding", 
@@ -67,7 +67,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     internalLink: "/crowdfunding",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "Data Visualization Portfolio", 
@@ -78,7 +78,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/DataVisualizationPortfolio",
     internalLink: "/data-viz-portfolio",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   {
     title: "slite.ai", 
@@ -90,7 +90,7 @@ const slides = ref([
     GithubLink: "",
     internalLink: "",
     PDFpath: "/projects/slite-ai.pdf",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "AI Chatbot", 
@@ -101,7 +101,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     internalLink: "/chatbot",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "Customer Relationship Management", 
@@ -112,7 +112,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/solefid-project",
     internalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "VRtual Arena", 
@@ -124,7 +124,7 @@ const slides = ref([
     GithubLink: "",
     internalLink: "",
     PDFpath: "/projects/VRtual_Arena.pdf",
-    DemoLink: "/book-demo", 
+    DemoLink: "/schedule", 
   },
   {
     title: "Dystributed System",
@@ -135,7 +135,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/MyDistributedSystem",
     internalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "Retrieval System", 
@@ -146,7 +146,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/AndreaGualandris/RetrievalSystem",
     internalLink: "",
-    DemoLink: "/book-demo", 
+    DemoLink: "/schedule", 
   },
   { 
     title: "Telegram Bot",
@@ -157,7 +157,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     internalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "PDF Manipulator", 
@@ -168,7 +168,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/PDF_Manipulator",
     internalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "Map", 
@@ -179,7 +179,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "",
     internalLink: "/map",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "My Terminal", 
@@ -190,7 +190,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/My_Terminal",
     internalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   { 
     title: "Instagram Bot", 
@@ -201,7 +201,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "https://github.com/Alan-Copa/Instagram_Bot",
     internalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
   {
     title: "Philosophy",
@@ -212,7 +212,7 @@ const slides = ref([
     GdriveLink: "",
     GithubLink: "  https://github.com/Alan-Copa/antropologic-universalism",
     internalLink: "",
-    DemoLink: "/book-demo"
+    DemoLink: "/schedule"
   },
 ]);
 
