@@ -1,6 +1,6 @@
 <template>
 <v-carousel
-  height="550"
+  height="600"
   progress="primary"
   hide-delimiters
   cycle
@@ -29,6 +29,7 @@
       class="projectCard mx-auto my-12 pa-4"
       elevation="8"
       color="transparent"
+      @click="() => $router.push('/projects')"
     >
       <v-img
         :src="`/projects/${project.imgname}`"

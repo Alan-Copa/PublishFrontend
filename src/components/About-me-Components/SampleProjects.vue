@@ -6,7 +6,11 @@
         <v-divider class="my-2"></v-divider>
         <v-row>
             <v-col v-for="project in featuredProjects" :key="project.title" cols="12" md="4">
-            <v-card class="project-card pa-4" elevation="6">
+            <v-card 
+            class="project-card pa-4" 
+            elevation="6" 
+            @click="() => $router.push('/projects')"
+            >
                 <v-img :src="`/projects/${project.imgname}`" height="180" cover class="rounded-lg"></v-img>
                 <v-card-title class="text-h6 font-weight-bold">{{ project.title }}</v-card-title>
                 <v-card-subtitle>{{ project.year }} - {{ project.type }}</v-card-subtitle>
@@ -27,6 +31,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 // Sample featured projects
 const featuredProjects = ref([
 {
