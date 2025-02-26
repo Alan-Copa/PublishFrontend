@@ -131,15 +131,17 @@ const emailRule = (value) =>
 // Submit function
 const submitMeeting = () => {
   if (formValid.value) {
-    alert(
-      `Meeting Scheduled!\n
-      Name: ${firstName.value} ${surname.value}\n
-      Email: ${email.value}\n
-      Purpose: ${meetingPurpose.value}\n
-      Date: ${selectedDate.value}\n
-      Time: ${selectedTime.value}\n
-      Notes: ${notes.value || "None"}`
-    );
+    // diabled feature
+    alert(`Sorry, this feature is disabled in this Version!`);
+    // alert(
+    //   `Meeting Scheduled!\n
+    //   Name: ${firstName.value} ${surname.value}\n
+    //   Email: ${email.value}\n
+    //   Purpose: ${meetingPurpose.value}\n
+    //   Date: ${selectedDate.value}\n
+    //   Time: ${selectedTime.value}\n
+    //   Notes: ${notes.value || "None"}`
+    // );
 
     // Clear form after successful submission
     firstName.value = null;
