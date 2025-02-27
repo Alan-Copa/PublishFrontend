@@ -1,59 +1,93 @@
 <template>
-<v-container class="pa-6">
+  <v-container class="pa-6">
     <!-- Header -->
     <v-container class="header-container text-center" fluid>
-    <v-row align="center" justify="center">
+      <v-row align="center" justify="center">
         <v-divider class="inv mr-3" inset vertical></v-divider>
         <h1 class="display-2">My Journey</h1>
         <v-divider class="inv mr-3" inset vertical></v-divider>
         <v-icon size="36">mdi-timeline</v-icon>
         <v-divider class="mr-3"></v-divider>
-    </v-row>
+      </v-row>
     </v-container>
 
-    <!-- Timeline -->
-    <v-timeline align="start" dense>
-    <v-timeline-item v-for="event in timelineEvents" :key="event.year" :dot-color="event.color" size="small">
+    <!-- Desktop Timeline -->
+    <v-timeline v-if="!isMobile" align="start" dense>
+      <v-timeline-item
+        v-for="event in timelineEvents"
+        :key="event.year"
+        :dot-color="event.color"
+        size="small"
+      >
         <template v-slot:opposite>
-        <div :class="`pt-1 headline font-weight-bold text-${event.color}`">
+          <div :class="`pt-1 headline font-weight-bold text-${event.color}`">
             {{ event.year }}
-        </div>
+          </div>
         </template>
         <div>
-        <h2 :class="`mt-n1 headline font-weight-light mb-2 text-${event.color}`">
+          <h2 :class="`mt-n1 headline font-weight-light mb-2 text-${event.color}`">
             {{ event.title }}
-        </h2>
-        <v-card class="pa-3 content-card" elevation="6">
+          </h2>
+          <v-card class="pa-3 content-card" elevation="6">
             <v-card-text>
-            <p class="text-body-1">{{ event.description }}</p>
+              <p class="text-body-1">{{ event.description }}</p>
             </v-card-text>
-        </v-card>
+          </v-card>
         </div>
-    </v-timeline-item>
+      </v-timeline-item>
     </v-timeline>
-</v-container>
+
+    <!-- Mobile Timeline (Ensuring Uniform Card Width & Matching Colors) -->
+    <v-container v-else>
+      <v-timeline density="compact" side="start">
+        <v-timeline-item
+          v-for="event in timelineEvents"
+          :key="event.year"
+          :dot-color="event.color"
+          size="small"
+          class="mb-4"
+        >
+          <div class="d-flex flex-column mobile-timeline-card">
+            <h2 :style="{ color: event.color }" class="text-body-1 font-weight-bold mb-1">
+              {{ event.year }}
+            </h2>
+            <h3 :style="{ color: event.color }" class="text-subtitle-1 font-weight-medium mb-1">
+              {{ event.title }}
+            </h3>
+            <v-card class="pa-3 content-card" elevation="6">
+              <v-card-text>
+                <p class="text-body-1">{{ event.description }}</p>
+              </v-card-text>
+            </v-card>
+          </div>
+        </v-timeline-item>
+      </v-timeline>
+    </v-container>
+  </v-container>
 </template>
 
 <script setup>
 import { ref } from "vue";
+
+const isMobile = computed(() => window.innerWidth <= 600);
 
 const timelineEvents = ref([
   {
     year: "2024 - Ongoing",
     title: "Master of Science in Financial Technology and Computing - Università della Svizzera italiana",
     description: "Pursuing an advanced track in Informatics and the Founders track, focusing on the intersection of finance, technology, and entrepreneurship.",
-    color: "teal",
+    color: "purple",
   },
   {
     year: "2024",
     title: "Swiss Army - Sergeant (Rettungsschule 75)",
     description: "Obtained two SVF-ASFC certificates: Leading a Team and Time Management. Gained leadership and command experience while improving proficiency in German and French. Developed strong decision-making, management, and stress-resistance skills.",
+    color: "red",
   },
   {
     year: "2024",
     title: "Swiss Army - Transmission Soldier (Rettungsschule 75)",
     description: "Completed recruit school, trained as a transmission soldier, and obtained heavy vehicle driver certification (C1, C1E, D1, D1E).",
-    color: "red",
   },
   {
     year: "2023 - Present",
@@ -65,7 +99,7 @@ const timelineEvents = ref([
     year: "2023",
     title: "Internship - Software Developer at Solefid SA",
     description: "Developed a tailored CRM web application, built a client database, and integrated activity management tools using Vue, Vuetify, Node.js, and MySQL.",
-    color: "green",
+    color: "lime",
   },
   {
     year: "2020 - 2023",
@@ -90,6 +124,17 @@ background: transparent;
 backdrop-filter: blur(10px);
 border-radius: 12px;
 transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+.mobile-timeline-card {
+  margin-left: -3em; /* Ensures uniform width */
+}
+
+/* 🔹 Mobile Timeline Cards */
+.mobile-timeline-card {
+  width: 18.7em; /* Ensures uniform width */
+}
 }
 
 /* 🔹 Hover Effect */

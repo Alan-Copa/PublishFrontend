@@ -12,28 +12,26 @@
       </v-container>
   
       <!-- Main Content Grid -->
-<v-row class="mt-6" align="stretch">
-  <!-- Profile Card -->
-  <v-col cols="12" md="4">
-    <MeCard />
-  </v-col>
+      <v-row class="mt-6" align="stretch">
+        <!-- Profile Card -->
+        <v-col cols="12" md="4">
+          <MeCard />
+        </v-col>
 
-  <!-- Biography and Skills Section -->
-  <v-col cols="12" md="8">
-    <v-row dense>
-      <v-col cols="12" class="mb-4">
-        <Biography />
-      </v-col>
+        <!-- Biography and Skills Section -->
+        <v-col cols="12" md="8">
+          <v-row dense>
+            <v-col cols="12" class="mb-4">
+              <Biography />
+            </v-col>
 
-      <v-col cols="12">
-        <SkillsComp />
-      </v-col>
-    </v-row>
-  </v-col>
-</v-row>
+            <v-col cols="12">
+              <SkillsComp />
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
 
-
-  
       <!-- Skills & Data Visualization Section in the same row -->
       <v-row class="mt-6">
         <!-- Skills & Competences -->
@@ -46,7 +44,6 @@
           <!-- <SkillsComp/> -->
         </v-col>
       </v-row>
-      
 
       <Timeline/>
 
