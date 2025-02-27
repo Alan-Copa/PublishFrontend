@@ -40,15 +40,14 @@ import { ref } from "vue";
 const timelineEvents = ref([
   {
     year: "2024 - Ongoing",
-    title: "Master in Financial Technology and Computing - Università della Svizzera italiana",
+    title: "Master of Science in Financial Technology and Computing - Università della Svizzera italiana",
     description: "Pursuing an advanced track in Informatics and the Founders track, focusing on the intersection of finance, technology, and entrepreneurship.",
     color: "teal",
   },
   {
     year: "2024",
     title: "Swiss Army - Sergeant (Rettungsschule 75)",
-    description: "Gained leadership and command experience while improving proficiency in German and French. Developed strong decision-making, management, and stress-resistance skills.",
-    color: "purple",
+    description: "Obtained two SVF-ASFC certificates: Leading a Team and Time Management. Gained leadership and command experience while improving proficiency in German and French. Developed strong decision-making, management, and stress-resistance skills.",
   },
   {
     year: "2024",
