@@ -17,6 +17,7 @@
 - add computer graphics + proj
 - proj theory sui graphs and hamiltonian cycle
 - add numerical
+- Proj SA4
 
 ## Data Visualizations Page
 - more data viz with vue graphs
