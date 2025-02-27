@@ -5,9 +5,6 @@
 - go on top of the page every time the user changes page*
 
 ## About Me Page
-- Change timeline for mobile devices
-- rewrite bio / me card text
-- mantain synch with CV
 
 ## Schedule Page
 - fix general layout
@@ -15,6 +12,11 @@
 - connect to my gmail calendar
 - generate calendar link for user
 - generare google meet link or a link for a call
+
+## Projects Page
+- add computer graphics + proj
+- proj theory sui graphs and hamiltonian cycle
+- add numerical
 
 ## Data Visualizations Page
 - more data viz with vue graphs
