@@ -5,9 +5,11 @@
         </v-card-title>
         <v-divider class="my-2"></v-divider>
         <v-card-text>
-            I'm <strong>Alan Copa</strong>, software engineer specializing in Finance, AI, blockchain, and web development.
-            I speak Italian, English, German, and French. With a strong foundation in machine learning, smart contracts, Vue, and React, I create high-performance applications with a focus on usability and innovation.
-            I have also obtained two 
+            I'm <strong>Alan Copa</strong>, a tech-driven finance enthusiast and software engineer specializing in Finance, AI, blockchain, and web development. With a strong foundation in software development, machine learning, and blockchain technology, I build high-performance applications with a focus on usability and innovation.
+
+            I am currently pursuing a Master’s in Financial Technology and Computing at USI. My military service as a Swiss Army sergeant has strengthened my leadership, discipline, and problem-solving skills.
+
+            I have expertise in Vue, React, smart contracts, and decentralized finance, and I speak Italian, English, German, and French. Additionally, I have obtained two 
             <a 
                 href="https://www.linkedin.com/in/alan-copa-03776929b/" 
                 target="_blank" 
